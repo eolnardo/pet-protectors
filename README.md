@@ -3,11 +3,11 @@ Projeto Integrador III - Prof. Enoque Leal
 
 Membros:
 
-José Ronaldo de Lima dos Santos Junior
-Leonardo França Serra
-Rafael Macena Ribeiro Machado
-Rafael Veiga Ramos
-Tiago Rabello Braz
+- José Ronaldo de Lima dos Santos Junior (JoosephJr)
+- Leonardo França Serra (eolnardo)
+- Rafael Macena Ribeiro Machado (RafaMachad)
+- Rafael Veiga Ramos (FireWar)
+- Tiago Rabello Braz (tirabello)
 
 Lista de Funcionalidades - Plano de Saúde para Pets
 

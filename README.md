@@ -1,7 +1,12 @@
 # PI3_Projeto
 Projeto Integrador III - Prof. Enoque Leal
 
-Membros:
+## Diagrama de Entidades 
+
+![PI3_DiagramaEntidades](https://github.com/eolnardo/PI3_Projeto/assets/116859982/390365f0-34d6-41f9-9392-5206292e8a05)
+
+
+### Membros:
 
 - José Ronaldo de Lima dos Santos Junior (JoosephJr)
 - Leonardo França Serra (eolnardo)
@@ -9,7 +14,7 @@ Membros:
 - Rafael Veiga Ramos (FireWar)
 - Tiago Rabello Braz (tirabello)
 
-Lista de Funcionalidades - Plano de Saúde para Pets
+### Lista de Funcionalidades - Plano de Saúde para Pets
 
 1) Tela Inicial sem Login Exibição dos valores dos planos, slideshow com fotos dos animais que são atendidos, FAQ
 
@@ -43,7 +48,7 @@ Informações básicas terão de ser preenchidas como:
 
 6) Banco de Dados:
 
-- Clínicas
+- Planos
 - Usuários
 - Pets
 

@@ -6,6 +6,10 @@ Projeto Integrador III - Prof. Enoque Leal
 ![PI3_DiagramaEntidades](https://github.com/eolnardo/PI3_Projeto/assets/116859982/390365f0-34d6-41f9-9392-5206292e8a05)
 
 
+## Diagrama de Caso de Uso
+![PI3 DiagramaCasoDeUso](https://github.com/eolnardo/PI3_Projeto/blob/main/documents/diagramas/petplan_diagramaCasodeUso.drawio.png)
+
+
 ### Membros:
 
 - [José Ronaldo de Lima dos Santos Junior](https://github.com/JoosephJr) (JoosephJr)

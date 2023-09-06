@@ -8,11 +8,11 @@ Projeto Integrador III - Prof. Enoque Leal
 
 ### Membros:
 
-- José Ronaldo de Lima dos Santos Junior (JoosephJr)
-- Leonardo França Serra (eolnardo)
-- Rafael Macena Ribeiro Machado (RafaMachad)
-- Rafael Veiga Ramos (FireWar)
-- Tiago Rabello Braz (tirabello)
+- José Ronaldo de Lima dos Santos Junior ![(JoosephJr)](https://github.com/JoosephJr)
+- Leonardo França Serra ![(eolnardo)](https://github.com/eolnardo)
+- Rafael Macena Ribeiro Machado ![(RafaMachad)](https://github.com/RafaMachad)
+- Rafael Veiga Ramos ![(FireWar)](https://github.com/FireWar)
+- Tiago Rabello Braz ![(tirabello)](https://github.com/tirabello)
 
 ### Lista de Funcionalidades - Plano de Saúde para Pets
 

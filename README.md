@@ -8,11 +8,11 @@ Projeto Integrador III - Prof. Enoque Leal
 
 ### Membros:
 
-- José Ronaldo de Lima dos Santos Junior ![(JoosephJr)](https://github.com/JoosephJr)
-- Leonardo França Serra ![(eolnardo)](https://github.com/eolnardo)
-- Rafael Macena Ribeiro Machado ![(RafaMachad)](https://github.com/RafaMachad)
-- Rafael Veiga Ramos ![(FireWar)](https://github.com/FireWar)
-- Tiago Rabello Braz ![(tirabello)](https://github.com/tirabello)
+- [José Ronaldo de Lima dos Santos Junior](https://github.com/JoosephJr) (JoosephJr)
+- [Leonardo França Serra](https://github.com/eolnardo) (eolnardo)
+- [Rafael Macena Ribeiro Machado](https://github.com/RafaMachad) (RafaMachad)
+- [Rafael Veiga Ramos](https://github.com/FireWar) (FireWar)
+- [Tiago Rabello Braz](https://github.com/tirabello) (tirabello)
 
 ### Lista de Funcionalidades - Plano de Saúde para Pets
 

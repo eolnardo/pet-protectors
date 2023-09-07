@@ -3,7 +3,7 @@ Projeto Integrador III - Prof. Enoque Leal
 
 ## Diagrama de Entidades 
 
-![PI3_DiagramaEntidades](https://github.com/eolnardo/PI3_Projeto/assets/116859982/390365f0-34d6-41f9-9392-5206292e8a05)
+![PI3_DiagramaEntidades](https://github.com/eolnardo/PI3_Projeto/blob/main/documents/diagramas/PI3_DiagramaEntidades.png)
 
 
 ## Diagrama de Caso de Uso

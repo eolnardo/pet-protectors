@@ -127,7 +127,7 @@ span {
 
 .botao {
     text-align: center;
-    padding: 1.4rem 8rem;
+    padding: 0.8rem 6rem;
     background: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
     border-radius: 50px;
     font-size: 3rem;
@@ -201,15 +201,9 @@ section {
 #secao-planos {
     display: flex;
     background: url('../images/muita-folha.jpg');
-    height: 100vh;
+    height: 93vh;
     justify-content: space-evenly;
     overflow: hidden;
-}
-
-#secao-planos ul {
-    display: flex;
-    gap: 10px;
-    color: var(--text-secundary);
 }
 
 #secao-planos li {
@@ -217,14 +211,16 @@ section {
     flex-direction: column;
     justify-content: space-evenly;
     list-style: none;
-    max-width: 35rem;
-    max-height: 60rem;
+    max-width: 400px;
+    max-height: 650px;
     border-radius: 15px;
     padding: 3rem;
     gap: 5rem;
     position: relative;
     cursor: pointer;
     background-color: #fff;
+    border: 5px inset #1E1D67;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.92);
 }
 
 #secao-planos li::before {
@@ -238,20 +234,70 @@ section {
     filter: blur(2px);
 }
 
+#secao-planos li:hover{
+    transform: translateY(-7px);
+}
+
+#secao-planos ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    gap: 10rem;
+    justify-content: space-evenly;
+}
+
 .card {
-    width: 25rem;
-    height: 30rem;
-    position: relative;
-    cursor: pointer;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    transition: all 0.9s ease-out;
+    gap: auto;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+}
+
+.card-image img {
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 -5px;
+}
+
+.big {
+    width: 110px;
+    height: 110px;
+    z-index: 5;
+    top: -10%;
+}
+
+.medium {
+    width: 80px;
+    height: 80px;
 }
 
 .card-info {
-    position: absolute;
-    bottom: -2rem;
-    opacity: 0;
-    padding: 1rem;
-    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
-    transition: all 0.3s;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info h3,
+.card-info p,
+.card-info h4 {
+    margin: 5px 0;
+}
+
+.botao {
+    margin-bottom: 10px;
 }
 
 .card:hover .card-text {
@@ -259,21 +305,20 @@ section {
     bottom: 0;
 }
 
-#secao-planos li:hover .card-info {
-    opacity: 1;
-    top: 0;
-}
-
 #secao-planos h3 {
     font-family: var(--font-default);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 3.3rem;
     color: darkblue;
 }
 
+#secao-planos h4{
+    font-size: 3rem;
+}
+
 #secao-planos p {
-    font-size: 1.4rem;
+    font-size: 18px;
 }
 
 .navbar {

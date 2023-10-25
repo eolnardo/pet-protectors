@@ -1,5 +1,8 @@
 package br.com.petprotectors.servlet;
 
+import br.com.petprotectors.dao.ClienteDao;
+import br.com.petprotectors.model.Cliente;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,6 +34,11 @@ public class ClienteServlet extends HttpServlet {
         String clienteSenha = req.getParameter("senha");
         String clienteEndereco = req.getParameter("endereco");
         String clienteTelfone = req.getParameter("telefone");
+
+        ClienteDao clienteDao = new ClienteDao();
+        Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero/*,clienteNascimento*/, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone);
+
+        clienteDao.criarCliente(cliente);
 
         System.out.println(clienteNome);
 

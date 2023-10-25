@@ -22,6 +22,21 @@ public class Cliente {
 
     private String telefone;
 
+    public Cliente() {
+    }
+
+    public Cliente(String nome, String cpf, String genero, String pets/*,Date nascimento*/, String email, String senha, String endereco, String telefone) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.genero = genero;
+        this.pets = pets;
+        //this.nascimento = nascimento;
+        this.email = email;
+        this.senha = senha;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
+
     public String getNome() {
         return nome;
     }

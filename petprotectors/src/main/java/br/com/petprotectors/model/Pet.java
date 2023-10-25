@@ -6,10 +6,10 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(String nome, String tutor, Date dataNascimento, String idade, String sexo, String especie, String raca) {
+    public Pet(String nome, String tutor/*, Date dataNascimento*/, String idade, String sexo, String especie, String raca) {
         this.nome = nome;
         this.tutor = tutor;
-        this.dataNascimento = dataNascimento;
+        //.dataNascimento = dataNascimento;
         this.idade = idade;
         this.sexo = sexo;
         this.especie = especie;

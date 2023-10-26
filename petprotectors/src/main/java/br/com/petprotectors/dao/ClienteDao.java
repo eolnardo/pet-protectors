@@ -42,16 +42,9 @@ public class ClienteDao {
 
         }
     }
-<<<<<<< Updated upstream
 
     public List<Cliente> findAllClientes(){
         String SQL = "SELECT * FROM CLIENTES";
-=======
-    public List<Cliente> findAllClientes() {
-
-        String SQL = "SELECT * FROM CLIENTES";
-
->>>>>>> Stashed changes
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -66,40 +59,24 @@ public class ClienteDao {
 
             while (resultSet.next()) {
 
-<<<<<<< Updated upstream
                 String clienteNome = resultSet.getString("nome");
-=======
-                String clienteNome = resultSet.getString("name");
->>>>>>> Stashed changes
                 String clienteCpf = resultSet.getString("cpf");
                 String clienteGenero = resultSet.getString("genero");
                 String clientePets = resultSet.getString("pets");
                 String clienteEmail = resultSet.getString("email");
                 String clienteSenha = resultSet.getString("senha");
                 String clienteEndereco = resultSet.getString("endereco");
-<<<<<<< Updated upstream
                 String clienteTelfone = resultSet.getString("telefone");
                 String clienteId = resultSet.getString("idCliente");
 
 
                 Cliente cliente = new Cliente(clienteNome,clienteCpf,clienteGenero,clientePets,clienteEmail,clienteSenha,clienteEndereco,clienteTelfone,clienteId);
-=======
-                String clienteTelefone = resultSet.getString("telefone");
-
-                Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero,
-                        clientePets, clienteEmail, clienteSenha, clienteEndereco,
-                        clienteTelefone);
->>>>>>> Stashed changes
 
                 clientes.add(cliente);
 
             }
 
-<<<<<<< Updated upstream
             System.out.println("success in select * cliente");
-=======
-            System.out.println("success in select * car");
->>>>>>> Stashed changes
 
             connection.close();
 
@@ -110,13 +87,7 @@ public class ClienteDao {
             System.out.println("fail in database connection");
 
             return Collections.emptyList();
-<<<<<<< Updated upstream
         }
-=======
-
-        }
-
->>>>>>> Stashed changes
     }
 
 }

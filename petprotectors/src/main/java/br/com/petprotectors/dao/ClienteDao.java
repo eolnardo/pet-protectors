@@ -80,7 +80,7 @@ public class ClienteDao {
 
             connection.close();
 
-            return cliente;
+            return clientes;
 
         } catch (Exception e) {
 

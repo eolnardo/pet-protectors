@@ -408,6 +408,6 @@ section {
     gap: 2rem;
 }
 
-#endereco {
+#endereco, #nome {
     width: 840px;
 }

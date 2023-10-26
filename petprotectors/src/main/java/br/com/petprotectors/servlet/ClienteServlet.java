@@ -35,8 +35,13 @@ public class ClienteServlet extends HttpServlet {
 
         clienteDao.criarCliente(cliente);
 
-        System.out.println(clienteNome);
+        //System.out.println(clienteNome);
 
+<<<<<<< Updated upstream
         //req.getRequestDispatcher("index.jsp").forward(req, resp);
+=======
+        req.getRequestDispatcher("teste.jsp").forward(req, resp);
+        resp.sendRedirect("/find-all-clientes");
+>>>>>>> Stashed changes
     }
 }

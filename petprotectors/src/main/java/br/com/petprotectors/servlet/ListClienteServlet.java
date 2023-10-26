@@ -1,7 +1,16 @@
 package br.com.petprotectors.servlet;
 
+<<<<<<< Updated upstream
 import br.com.petprotectors.dao.ClienteDao;
 import br.com.petprotectors.model.Cliente;
+=======
+
+
+import br.com.petprotectors.dao.ClienteDao;
+import br.com.petprotectors.dao.PetDao;
+import br.com.petprotectors.model.Cliente;
+import br.com.petprotectors.model.Pet;
+>>>>>>> Stashed changes
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,4 +33,8 @@ public class ListClienteServlet extends HttpServlet {
         req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
 
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

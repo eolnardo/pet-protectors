@@ -24,24 +24,19 @@ public class ClienteServlet extends HttpServlet {
         String clienteCpf = req.getParameter("cpf");
         String clienteGenero = req.getParameter("genero");
         String clientePets = req.getParameter("pets");
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            Date clienteNascimento = formatter.parse(req.getParameter("nascimento"));
-        } catch (ParseException e) {
-            System.out.println("Data inválida");
-        }
         String clienteEmail = req.getParameter("email");
         String clienteSenha = req.getParameter("senha");
         String clienteEndereco = req.getParameter("endereco");
         String clienteTelfone = req.getParameter("telefone");
+        String clienteId = req.getParameter("idCliente");
 
         ClienteDao clienteDao = new ClienteDao();
-        Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero/*,clienteNascimento*/, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone);
+        Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero/*,clienteNascimento*/, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
 
         clienteDao.criarCliente(cliente);
 
         System.out.println(clienteNome);
 
-        req.getRequestDispatcher("teste.jsp").forward(req, resp);
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 }

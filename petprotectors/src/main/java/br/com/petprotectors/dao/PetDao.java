@@ -13,11 +13,11 @@ import java.util.List;
 public class PetDao {
 
     public void criarPet (Pet pet){
-        String SQL = "INSERT INTO PET (NAME, TUTOR, NASCIMENTO, IDADE, SEXO, ESPECIE, RACA) VALUES (?,?,?,?,?,?,?)";
+        String SQL = "INSERT INTO PET (NAME, TUTOR, IDADE, SEXO, ESPECIE, RACA) VALUES (?,?,?,?,?,?)";
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/petprotectors", "sa", "sa");
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
             System.out.println("success in database connection");
 
@@ -25,11 +25,10 @@ public class PetDao {
 
             preparedStatement.setString(1, pet.getNome());
             preparedStatement.setString(2, pet.getTutor());
-            preparedStatement.setDate(3, new java.sql.Date(pet.getDataNascimento().getTime()));
-            preparedStatement.setString(4, pet.getIdade());
-            preparedStatement.setString(5, pet.getSexo());
-            preparedStatement.setString(6, pet.getEspecie());
-            preparedStatement.setString(7, pet.getRaca());
+            preparedStatement.setString(3, pet.getIdade());
+            preparedStatement.setString(4, pet.getSexo());
+            preparedStatement.setString(5, pet.getEspecie());
+            preparedStatement.setString(6, pet.getRaca());
             preparedStatement.execute();
 
 
@@ -87,8 +86,9 @@ public class PetDao {
                 String petSexo = resultSet.getString("sexo");
                 String petEspecie = resultSet.getString("especie");
                 String petRaca = resultSet.getString("raca");
+                String petId = resultSet.getString("idPet");
 
-                Pet pet = new Pet(petNome, petTutor,petIdade, petSexo,petEspecie,petRaca);
+                Pet pet = new Pet(petNome, petTutor,petIdade, petSexo,petEspecie,petRaca, petId);
 
                 pets.add(pet);
 

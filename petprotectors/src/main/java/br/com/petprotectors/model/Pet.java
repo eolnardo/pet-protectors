@@ -6,14 +6,25 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(String nome, String tutor/*, Date dataNascimento*/, String idade, String sexo, String especie, String raca) {
+    public Pet(String nome, String tutor, String idade, String sexo, String especie, String raca, String id) {
         this.nome = nome;
         this.tutor = tutor;
-        //.dataNascimento = dataNascimento;
         this.idade = idade;
         this.sexo = sexo;
         this.especie = especie;
         this.raca = raca;
+        this.id = id;
+    }
+
+    public Pet(String nome, String tutor, Date dataNascimento, String idade, String sexo, String especie, String raca, String id) {
+        this.nome = nome;
+        this.tutor = tutor;
+        this.dataNascimento = dataNascimento;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.especie = especie;
+        this.raca = raca;
+        this.id = id;
     }
 
     private String nome;
@@ -23,6 +34,7 @@ public class Pet {
     private String sexo;
     private String especie;
     private String raca;
+    private String id;
 
     public String getNome() {
         return nome;
@@ -78,5 +90,13 @@ public class Pet {
 
     public void setRaca(String raca) {
         this.raca = raca;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

@@ -22,19 +22,38 @@ public class Cliente {
 
     private String telefone;
 
+    private String id;
+
     public Cliente() {
     }
 
-    public Cliente(String nome, String cpf, String genero, String pets/*,Date nascimento*/, String email, String senha, String endereco, String telefone) {
+    public Cliente(String nome, String cpf, String genero, String pets,Date nascimento, String email, String senha, String endereco, String telefone, String id) {
         this.nome = nome;
         this.cpf = cpf;
         this.genero = genero;
         this.pets = pets;
-        //this.nascimento = nascimento;
+        this.nascimento = nascimento;
         this.email = email;
         this.senha = senha;
         this.endereco = endereco;
         this.telefone = telefone;
+        this.id = id;
+    }
+
+    public Cliente(String nome, String cpf, String genero, String pets, String email, String senha, String endereco, String telefone, String id) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.genero = genero;
+        this.pets = pets;
+        this.email = email;
+        this.senha = senha;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.id = id;
+    }
+
+    public Cliente(String nome) {
+        this.nome = nome;
     }
 
     public String getNome() {
@@ -107,5 +126,13 @@ public class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

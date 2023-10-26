@@ -3,6 +3,7 @@ body {
     margin: 0;
     display: flex;
     height: 100vh;
+    list-style: none;
 }
 .navbar {
     background-color: #1E1D67;
@@ -55,6 +56,12 @@ body {
     margin-left: 25%;
     background-color: #b7bafd;
     justify-content: space-between;
+    text-align: center;
+    justify-items: end;
+}
+
+.content li{
+    margin: 3rem;
 }
 
 .pet-card {
@@ -62,42 +69,45 @@ body {
     border-radius: 120px;
     padding: 20px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-top: 60px;
     margin-left: 3rem;
 }
-.pet-image {
-    border-radius: 50%;
-    max-width: 100px;
-    margin-right: 20px;
-}
 .pet-image img{
+    border-radius: 50%;
     max-width: 175px;
+    margin-right: 20px;
 }
 .pet-info {
     width: 50%;
     margin-left: 7rem;
 }
 .pet-info h2 {
+    justify-self: flex-start;
     margin: 0 0 10px;
     color: #4DFF3E;
 }
-.pet-info p {
-    margin: 0;
+.pet-info p, input {
+    left: 150px;
+    width: 22rem;
     color: #4DFF3E;
+    text-align: center;
 }
 .info-line{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
+    max-width: fit-content;
+    gap: 10px;
 }
 .pet-data {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 10px;
 }
 .pet-data input {
     border-radius: 15px;
-    width: 60%;
     padding: 5px;
 }
+

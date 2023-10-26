@@ -64,7 +64,7 @@ body {
     align-content: center;
 }
 
-.menu a:hover {
+a:hover {
     color: #000;
 }
 
@@ -128,26 +128,27 @@ span {
 .botao {
     text-align: center;
     padding: 0.8rem 6rem;
-    background: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
+    margin-bottom: 10px;
     border-radius: 50px;
     font-size: 3rem;
     color: #fff;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     text-decoration: none;
-    max-width: fit-content;
+    width: fit-content;
     align-self: center;
     cursor: pointer;
 }
 
-.excluir {
-    text-align: center;
-    padding: 1.4rem 8rem;
+.verde {
+    background: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
+}
+
+.verde:hover {
+    background: linear-gradient(90deg, #184d13 0%, #34ad29 100%);
+}
+
+.cinza {
     background: linear-gradient(90deg, #303030 0%, #8b8b8b 100%);
-    border-radius: 50px;
-    font-size: 3rem;
-    color: #fff;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    text-decoration: none;
 }
 
 section {
@@ -164,6 +165,17 @@ section {
     100% {
         transform: scale(1);
     }
+}
+
+#titulo{
+    background-color: #4DFF3E;
+    justify-content: flex-start;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 25px;
+    position: relative;
+    top: -10%;
 }
 
 #card-apresentacao {
@@ -234,7 +246,7 @@ section {
     filter: blur(2px);
 }
 
-#secao-planos li:hover{
+#secao-planos li:hover {
     transform: translateY(-7px);
 }
 
@@ -296,10 +308,6 @@ section {
     margin: 5px 0;
 }
 
-.botao {
-    margin-bottom: 10px;
-}
-
 .card:hover .card-text {
     opacity: 1;
     bottom: 0;
@@ -313,7 +321,7 @@ section {
     color: darkblue;
 }
 
-#secao-planos h4{
+#secao-planos h4 {
     font-size: 3rem;
 }
 
@@ -355,4 +363,51 @@ section {
     color: #4DFF3E;
     text-decoration: overline;
     font-weight: bold;
+}
+
+.cadastro {
+    background-color: #b7bafd;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-cliente {
+    margin-top: 20px;
+    width: 1000px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 90%;
+    row-gap: 20px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.cadastro-cliente input {
+    border: none;
+    border-radius: 10px;
+    background-color: #cccccc;
+    height: 40px;
+    width: 300px;
+}
+
+.cadastro-cliente label {
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 200px;
+}
+
+.form-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+#endereco {
+    width: 840px;
 }

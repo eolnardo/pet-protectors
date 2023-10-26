@@ -13,7 +13,7 @@ import java.util.List;
 public class PetDao {
 
     public void criarPet (Pet pet){
-        String SQL = "INSERT INTO PET (NAME, TUTOR, IDADE, SEXO, ESPECIE, RACA) VALUES (?,?,?,?,?,?)";
+        String SQL = "INSERT INTO PET (NOME, IDADE, SEXO, ESPECIE, RACA, TUTOR) VALUES (?,?,?,?,?,?)";
 
         try {
 
@@ -24,11 +24,11 @@ public class PetDao {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, pet.getNome());
-            preparedStatement.setString(2, pet.getTutor());
-            preparedStatement.setString(3, pet.getIdade());
-            preparedStatement.setString(4, pet.getSexo());
-            preparedStatement.setString(5, pet.getEspecie());
-            preparedStatement.setString(6, pet.getRaca());
+            preparedStatement.setString(2, pet.getIdade());
+            preparedStatement.setString(3, pet.getSexo());
+            preparedStatement.setString(4, pet.getEspecie());
+            preparedStatement.setString(5, pet.getRaca());
+            preparedStatement.setInt(6, 1);
             preparedStatement.execute();
 
 

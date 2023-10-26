@@ -37,6 +37,6 @@ public class ClienteServlet extends HttpServlet {
 
         System.out.println(clienteNome);
 
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
+        //req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 }

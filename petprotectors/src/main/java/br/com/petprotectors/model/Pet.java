@@ -16,6 +16,15 @@ public class Pet {
         this.id = id;
     }
 
+    public Pet(String nome, String idade, String sexo, String especie, String raca, String id) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.especie = especie;
+        this.raca = raca;
+        this.id = id;
+    }
+
     public Pet(String nome, String tutor, Date dataNascimento, String idade, String sexo, String especie, String raca, String id) {
         this.nome = nome;
         this.tutor = tutor;

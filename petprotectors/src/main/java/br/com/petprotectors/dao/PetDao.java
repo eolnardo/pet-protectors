@@ -65,7 +65,7 @@ public class PetDao {
     }
 
     public List<Pet> findAllPets(){
-        String SQL = "SELECT * FROM CAR";
+        String SQL = "SELECT * FROM PET";
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");

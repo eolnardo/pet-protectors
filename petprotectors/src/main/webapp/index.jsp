@@ -1,34 +1,117 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Protectors</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-<h2>Criar Cliente</h2>
-<form action="TelaCadastroCliente.jsp" method="post">
+    <div class="navbar">
+        <a href="#" class="navbar-brand">Pet Protectors</a>
+        <ul class="navbar-menu">
+            <div class="hamburguer">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </div>
+        </ul>
+    </div>
 
-    <label>Cliente Nome</label>
+    <nav class="menu">
+        <ul>
+            <li>
+                <span class="login">Usuário</span>
+            </li>
+            <li>
+                <textarea></textarea>
+            </li>
+            <li>
+                <span class="login">Senha</span>
+            </li>
+            <li>
+                <textarea></textarea>
+            </li>
+            <span> </span>
+            <a href="" class="botao verde" style="width: 25rem">Entrar</a>
+            <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
+        </ul>
+    </nav>
 
-    <input type="text" name="nome" id="nome" value="${param.nome}">
-    <input type="text" name="cpf" id="cpf" value="${param.cpf}">
-    <input type="text" name="genero" id="genero" value="${param.genero}">
-    <input type="text" name="pets" id="pets" value="${param.pets}">
-    <input type="text" name="email" id="email" value="${param.email}">
-    <input type="text" name="senha" id="senha" value="${param.senha}">
-    <input type="text" name="endereco" id="endereco" value="${param.endereco}">
-    <input type="text" name="telefone" id="telefone" value="${param.telefone}">
+    <header>
+        <div id="card-apresentacao">
+            <img class="img-apresentacao" src="assets/images/vet-arara.jpg">
+            <h1>Pet Protectors</h1>
+            <span>O serviço de cuidados que traz para o seu animal de estimação uma vida longa e saudável</span>
+            <a href="#secao-planos" class="botao verde">Conheça os planos!</a>
+        </div>
+    </header>
 
-    <!--
-    <label> Criar Pet</label>
-    <input type="text" name="nome" id="nome" value="${param.nome}">
-    <input type="text" name="idade" id="idade" value="${param.idade}">
-    <input type="text" name="sexo" id="sexo" value="${param.sexo}">
-    <input type="text" name="especie" id="especie" value="${param.especie}">
-    <input type="text" name="raca" id="raca" value="${param.raca}">
+    <section id="secao-planos">
+        <ul>
+            <li>
+                <div class="card">
+                    <div class="card-image">
+                        <img class="medium" src="assets/images/2-hamster.png">
+                        <img class="big" src="assets/images/1-dog.png">
+                        <img class="medium" src="assets/images/3-turtle.png">
+                    </div>
+                    <div class="card-info">
+                        <h3>Plano Basic</h3>
+                        <p>Consultas das 06h as 20h</p>
+                        <p>Cobertura de vacinas</p>
+                        <p>Atendimento à domicílio</p>
+                    </div>
+                    <h4>R$ 34,99</h4>
+                    <a href="" class="botao verde">Assinar</a>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="card-image">
+                        <img class="medium" src="assets/images/2-porquinho.png">
+                        <img class="big" src="assets/images/1-calopsita.png">
+                        <img class="medium" src="assets/images/3-furao.png">
+                    </div>
+                    <div class="card-info">
+                        <h3>Plano Mid</h3>
+                        <p>Consultas das 06h as 20h</p>
+                        <p>Cobertura de vacinas</p>
+                        <p>Atendimento à domicílio</p>
+                        <p>Exames básicos e de imagem</p>
+                    </div>
+                    <h4>R$ 69,99</h4>
+                    <a href="" class="botao verde">Assinar</a>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="card-image">
+                        <img class="medium" src="assets/images/2-iguana.png">
+                        <img class="big" src="assets/images/1-cat.png">
+                        <img class="medium" src="assets/images/3-arara.png">
+                    </div>
+                    <div class="card-info">
+                        <h3>Plano Premium</h3>
+                        <p>Consultas das 06h as 20h</p>
+                        <p>Cobertura de vacinas</p>
+                        <p>Atendimento à domicílio</p>
+                        <p>Exames complexos</p>
+                        <p>Internação</p>
+                        <p>Processos cirúrgicos</p>
+                    </div>
+                    <h4>R$ 99,99</h4>
+                    <a href="" class="botao verde">Assinar</a>
+                </div>
+            </li>
 
-    <button type="submit">Save</button>
--->
+        </ul>
+    </section>
 
-    <button type="submit">Save</button>
-</form>
+    <script src="assets/js/menu.js"></script>
 </body>
+
 </html>

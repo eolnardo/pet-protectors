@@ -1,6 +1,7 @@
 package br.com.petprotectors.dao;
 
 import br.com.petprotectors.model.Pet;
+import br.com.petprotectors.servlet.config.ConnectionPoolConfig;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +18,7 @@ public class PetDao {
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             System.out.println("success in database connection");
 

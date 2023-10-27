@@ -42,31 +42,32 @@
     </nav>
 
     <section class="cadastro">
-        <form action="#" method="post">
+        <form action="/create-pet" method="post">
             <div class="cadastro-cliente">
                 <div id="titulo">
                     <p>Cadastro Pet</p>
                 </div>
                 <div class="form-line">
+                    <input type="hidden" id="idPet" name="idPet" value="${param.idPet}">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome"><br><br>
+                    <input type="text" id="nome" name="nome" value="${param.nome}"><br><br>
                 </div>
                 <div class="form-line">
                     <label for="idade">Idade:</label>
-                    <input type="text" id="idade" name="idade"><br><br>
+                    <input type="text" id="idade" name="idade" value="${param.idade}"><br><br>
                     <label for="sexo">Sexo:</label>
-                    <input type="text" id="sexo" name="sexo"><br><br>
+                    <input type="text" id="sexo" name="sexo" value="${param.sexo}"><br><br>
                     <
                 </div>
                 <div class="form-line" id="login">
                     <label for="especie">Espécie:</label>
-                    <input type="text" id="especie" name="especie"><br><br>
+                    <input type="text" id="especie" name="especie" value="${param.especie}"><br><br>
                     <label for="raca">Raça:</label>
-                    <input type="email" id="raca" name="raca"><br><br>
+                    <input type="email" id="raca" name="raca" value="${param.raca}"><br><br>
                 </div>
                 <div>
                     <a href="" class="botao cinza">Voltar</a>
-                    <a href="" class="botao verde">Cadastrar</a>
+                    <a href="Login-MeusPets.jsp" class="botao verde">Cadastrar</a>
                 </div>
             </div>
         </form>

@@ -76,7 +76,7 @@
                     <input type="text" id="senha" name="senha" value="${param.senha}"><br><br>
                 </div>
                 <div>
-                    <a href="" class="botao cinza">Voltar</a>
+                    <a href="index.jsp" class="botao cinza">Voltar</a>
                     <button type="submit" href="" class="botao verde">Cadastrar</button>
                 </div>
             </div>

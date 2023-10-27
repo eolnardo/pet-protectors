@@ -37,6 +37,6 @@ public class ClienteServlet extends HttpServlet {
             clienteDao.criarCliente(cliente);
         }
 
-        req.getRequestDispatcher("TelaCadastroCliente.jsp").forward(req, resp);
+        resp.sendRedirect("/show-cliente");
     }
 }

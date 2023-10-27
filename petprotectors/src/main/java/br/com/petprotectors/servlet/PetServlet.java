@@ -20,7 +20,7 @@ public class PetServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String petNome = req.getParameter("nome");
-        //String petTutor = req.getParameter("tutor");
+        String petTutor = req.getParameter("tutor");
         String petIdade = req.getParameter("idade");
         String petSexo = req.getParameter("sexo");
         String petEspecie = req.getParameter("especie");
@@ -30,8 +30,11 @@ public class PetServlet extends HttpServlet {
         PetDao petDao = new PetDao();
         Pet pet = new Pet(petNome, petIdade, petSexo,petEspecie,petRaca, petId);
 
-        petDao.criarPet(pet);
+        if (petId.isBlank()){
+            petDao.criarPet(pet);
+        }
 
-        req.getRequestDispatcher("TelaCadastroPet.html").forward(req, resp);
+
+        req.getRequestDispatcher("TelaCadastroPet.jsp").forward(req, resp);
     }
 }

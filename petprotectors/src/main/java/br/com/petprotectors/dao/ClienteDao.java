@@ -2,6 +2,7 @@ package br.com.petprotectors.dao;
 
 import br.com.petprotectors.model.Cliente;
 import br.com.petprotectors.model.Pet;
+import br.com.petprotectors.servlet.config.ConnectionPoolConfig;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,11 +19,11 @@ public class ClienteDao {
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("success in database connection");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            ResultSet rs = preparedStatement.getGeneratedKeys();
 
             preparedStatement.setString(1, cliente.getNome());
             preparedStatement.setString(2, cliente.getCpf());
@@ -33,7 +34,10 @@ public class ClienteDao {
             preparedStatement.setString(7, cliente.getEndereco());
             preparedStatement.setString(8, cliente.getTelefone());
 
+
+
             preparedStatement.execute();
+
 
 
         } catch (Exception e){
@@ -47,9 +51,7 @@ public class ClienteDao {
         String SQL = "SELECT * FROM CLIENTES";
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("success in database connection");
+            Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 

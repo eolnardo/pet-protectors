@@ -28,15 +28,15 @@ public class ClienteServlet extends HttpServlet {
         String clienteSenha = req.getParameter("senha");
         String clienteEndereco = req.getParameter("endereco");
         String clienteTelfone = req.getParameter("telefone");
-        String clienteId = req.getParameter("idCliente");
+        String clienteId = req.getParameter("clienteId");
 
         ClienteDao clienteDao = new ClienteDao();
         Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero/*,clienteNascimento*/, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
 
-        clienteDao.criarCliente(cliente);
+        if (clienteId.isBlank()) {
+            clienteDao.criarCliente(cliente);
+        }
 
-        System.out.println(clienteNome);
-
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
+        req.getRequestDispatcher("TelaCadastroCliente.jsp").forward(req, resp);
     }
 }

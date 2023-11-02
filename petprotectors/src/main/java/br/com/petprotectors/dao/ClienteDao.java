@@ -101,6 +101,10 @@ public class ClienteDao {
             preparedStatement.setString(1, cliente.getEmail());
             ResultSet resultSet = preparedStatement.executeQuery();
 
+            String id = resultSet.getString(1);
+
+            cliente.setClienteId(exibirCliente(id).getClienteId());
+
             System.out.println("success in select email");
 
             while (resultSet.next()) {
@@ -108,6 +112,7 @@ public class ClienteDao {
                 String senha = resultSet.getString("senha");
 
                 if (senha.equals(cliente.getSenha())) {
+
 
                     return true;
 

@@ -33,7 +33,7 @@ public class ClienteServlet extends HttpServlet {
         ClienteDao clienteDao = new ClienteDao();
         Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero/*,clienteNascimento*/, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
 
-        if (clienteId.isBlank()) {
+        if (clienteId == null || clienteId.isBlank()) {
             clienteDao.criarCliente(cliente);
         }
 

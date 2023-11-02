@@ -14,11 +14,20 @@ import java.util.List;
 
 @WebServlet("/show-cliente")
 public class ListClienteServlet extends HttpServlet {
+    private static Cliente cliente;
+
+    public static Cliente getCliente() {
+        return cliente;
+    }
+
+    public static void setCliente(Cliente cliente) {
+        ListClienteServlet.cliente = cliente;
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String id = req.getParameter("clienteId");
+        String id = getCliente().getClienteId();
 
         System.out.println(id);
 

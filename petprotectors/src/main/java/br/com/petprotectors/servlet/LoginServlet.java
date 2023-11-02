@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -26,9 +27,11 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String senha = req.getParameter("senha");
 
-        Cliente user = new Cliente(email, senha);
+        Cliente cliente = new Cliente(email, senha);
 
-        boolean isValidUser = new ClienteDao().verifyCredentials(user);
+        boolean isValidUser = new ClienteDao().verifyCredentials(cliente);
+
+        ListClienteServlet.setCliente(cliente);
 
         if (isValidUser) {
 

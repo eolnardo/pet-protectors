@@ -22,8 +22,8 @@
     </div>
 
     <nav class="menu">
+        <ul>
         <form action="/login" method="post">
-            <ul>
                 <li>
                     <span class="login">Usuário</span>
 
@@ -39,8 +39,8 @@
                 </li>
                 <span> </span>
                 <button type="submit" class="botao verde" style="width: 25rem">Entrar </button>
-            </form>
-            <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
+        </form>
+        <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
         </ul>
     </nav>
 

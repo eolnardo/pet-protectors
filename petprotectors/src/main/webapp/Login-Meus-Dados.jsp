@@ -23,23 +23,25 @@
 </div>
 
 <nav class="menu">
-    <ul>
-        <li>
-            <span class="login">Usuário</span>
-        </li>
-        <li>
-            <textarea></textarea>
-        </li>
-        <li>
-            <span class="login">Senha</span>
-        </li>
-        <li>
-            <textarea></textarea>
-        </li>
-        <span> </span>
-        <a href="" class="botao verde" style="width: 25rem">Entrar</a>
-        <a href="" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
-    </ul>
+    <div class="navbar">
+            <a href="#" class="navbar-brand">Pet Protectors</a>
+        </div>
+
+        <div class="sidebar">
+            <div class="user-info">
+                <img src="assets/images/user.png" alt="User Image">
+                <p>Nome do Usuário</p>
+            </div>
+            <div class="menu-options">
+                <a href="#">Meus Dados</a>
+                <a href="#">Meus Pets</a>
+                <a href="#">Meus Agendamentos</a>
+                <a href="#">Meu Plano</a>
+                <a href="#">Sair</a>
+            </div>
+        </div>
+        <div class="content">
+        </div>
 </nav>
 
 <section class="cadastro">

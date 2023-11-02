@@ -22,21 +22,24 @@
     </div>
 
     <nav class="menu">
-        <ul>
-            <li>
-                <span class="login">Usuário</span>
-            </li>
-            <li>
-                <textarea></textarea>
-            </li>
-            <li>
-                <span class="login">Senha</span>
-            </li>
-            <li>
-                <textarea></textarea>
-            </li>
-            <span> </span>
-            <a href="" class="botao verde" style="width: 25rem">Entrar</a>
+        <form action="/login" method="post">
+            <ul>
+                <li>
+                    <span class="login">Usuário</span>
+
+                </li>
+                <li>
+                    <input class="login" type="email" id="email" name="email" value="${cliente.email}">
+                </li>
+                <li>
+                    <span class="login">Senha</span>
+                </li>
+                <li>
+                    <input class="login" type="password" id="senha" name="senha" value="${cliente.senha}">r
+                </li>
+                <span> </span>
+                <button type="submit" class="botao verde" style="width: 25rem">Entrar </button>
+            </form>
             <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
         </ul>
     </nav>

@@ -15,8 +15,6 @@ import java.util.List;
 @WebServlet("/show-cliente")
 public class ListClienteServlet extends HttpServlet {
 
-
-    protected void receberCliente
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 

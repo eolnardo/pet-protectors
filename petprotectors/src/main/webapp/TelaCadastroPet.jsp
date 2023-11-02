@@ -25,12 +25,14 @@
         <ul>
             <li>
                 <span class="login">Usuário</span>
+                <input type="email" id="email" name="email" value="${cliente.email}">
             </li>
             <li>
                 <textarea></textarea>
             </li>
             <li>
                 <span class="login">Senha</span>
+                <input type="password" id="senha" name="senha" value="${cliente.senha}">
             </li>
             <li>
                 <textarea></textarea>

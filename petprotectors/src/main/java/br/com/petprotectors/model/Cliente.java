@@ -56,6 +56,11 @@ public class Cliente {
         this.nome = nome;
     }
 
+    public Cliente(String email, String senha) {
+        this.email = email;
+        this.senha = senha;
+    }
+
     public String getNome() {
         return nome;
     }

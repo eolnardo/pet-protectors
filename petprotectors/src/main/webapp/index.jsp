@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Protectors</title>
-    <link rel="icon" href="assets/images/icon-pegada.png" type="image/png">
+    <link rel="shortcut icon" href="/assets/icons/icon-pegada-preta.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
     <div class="navbar">
+        <img src="/assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
         <a href="index.html" class="navbar-brand">Pet Protectors</a>
         <ul class="navbar-menu">
             <div class="hamburguer">
@@ -24,7 +25,7 @@
 
     <nav class="menu">
         <ul>
-        <form action="/login" method="post">
+            <form action="/login" method="post">
                 <li>
                     <span class="login">Usuário</span>
                 </li>
@@ -42,7 +43,7 @@
                 </li>
             </form>
             <button type="submit" class="botao verde" style="width: 25rem">Entrar </button>
-        <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
+            <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
         </ul>
     </nav>
 

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -20,6 +21,9 @@ html {
 
 body {
     font-family: var(--font-default);
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
 
 .hamburguer {
@@ -62,10 +66,6 @@ body {
     font-size: 1.8rem;
     text-align: center;
     align-content: center;
-}
-
-.login{
-
 }
 
 a:hover {
@@ -171,8 +171,8 @@ section {
     }
 }
 
-#titulo{
-    background-color: #4DFF3E;
+#titulo {
+    background-color: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
     justify-content: flex-start;
     max-width: fit-content;
     height: fit-content;
@@ -180,9 +180,10 @@ section {
     border-radius: 25px;
     position: relative;
     top: -10%;
+    font-weight: bold;
 }
 
-#card-apresentacao {
+.card-apresentacao {
     max-width: 80rem;
     text-align: center;
     display: flex;
@@ -337,7 +338,6 @@ section {
     background-color: #1E1D67;
     height: 65px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     width: 100%;
@@ -363,11 +363,6 @@ section {
     margin: 0 10px;
 }
 
-.navbar-menu a {
-    color: #4DFF3E;
-    text-decoration: overline;
-    font-weight: bold;
-}
 
 .cadastro {
     background-color: #b7bafd;
@@ -402,7 +397,6 @@ section {
 .cadastro-cliente label {
     font-size: 2.5rem;
     font-weight: bold;
-    width: 200px;
 }
 
 .form-line {
@@ -412,6 +406,108 @@ section {
     gap: 2rem;
 }
 
-#endereco, #nome {
-    width: 840px;
+
+.container{
+    margin-top: 10rem;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    background-color: #b7bafd;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-size: cover;
+}
+
+.form-image img{
+    width: 60rem;
+}
+
+.form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cccccc;
+    padding: 3rem;
+}
+
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+}
+
+.titulo{
+    background-color: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
+    justify-content: flex-start;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 25px;
+    position: relative;
+    top: -10%;
+    font-weight: bold;
+}
+
+.cadastrar-button button{
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    font-family: 'Inter';
+    width: 10rem;
+    height: 0.6rem;
+    background-color: #4DFF3E;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px #444444;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #303030;
+}
+
+.input-box label,
+.gender-title{
+    
 }

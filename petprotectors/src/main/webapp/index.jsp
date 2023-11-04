@@ -42,7 +42,7 @@
                     <span> </span>
                 </li>
             </form>
-            <button type="submit" class="botao verde" style="width: 25rem">Entrar </button>
+            <button type="submit" class="botao verde" style="width: 25rem">Entrar</button>
             <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
         </ul>
     </nav>

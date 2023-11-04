@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    color: #1E1D67;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 22.5px;
+}
+
+.sidebar img{
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.username{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px
+}
+
+.conteudo {
+    left: 0;
+    width: 80%;
+    margin-left: 20%;
+    background-color: #b7bafd;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo .centralizado {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

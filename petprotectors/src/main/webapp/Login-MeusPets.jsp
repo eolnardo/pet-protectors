@@ -21,11 +21,13 @@
             <p>Nome do Usuário</p>
         </div>
         <div class="menu-options">
-            <a href="#">Meus Dados</a>
-            <a href="#">Meus Pets</a>
-            <a href="#">Meus Agendamentos</a>
-            <a href="#">Meu Plano</a>
-            <a href="#">Sair</a>
+            <ul>
+                <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
+                <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
+                <li><a href="Login-Agendamentos.html">Agendamentos</a></li>
+                <li><a href="">Meu Plano</a></li>
+                <li><a href="index.jsp">Sair</a></li>
+            </ul>
         </div>
     </div>
     <div class="content">

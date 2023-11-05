@@ -12,7 +12,7 @@
 
 <body>
     <div class="navbar">
-        <a href="#" class="navbar-brand">Pet Protectors</a>
+        <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
         <ul class="navbar-menu">
             <div class="hamburguer">
                 <div class="linha"></div>

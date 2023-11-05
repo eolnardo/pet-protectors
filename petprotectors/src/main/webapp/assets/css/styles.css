@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -20,6 +21,9 @@ html {
 
 body {
     font-family: var(--font-default);
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
 
 .hamburguer {
@@ -75,25 +79,15 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     margin-left: 2rem;
-    gap: 5rem
+    gap: 1rem
 }
 
 .menu li {
     list-style: none;
-    margin-top: 10px;
 }
 
 .show-menu {
     right: 0;
-}
-
-.login {
-    width: 275px;
-    height: 40px;
-}
-
-.login span {
-    border-radius: 50px;
 }
 
 li span {
@@ -178,7 +172,7 @@ section {
 }
 
 #titulo {
-    background-color: #4DFF3E;
+    background-color: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
     justify-content: flex-start;
     max-width: fit-content;
     height: fit-content;
@@ -186,56 +180,39 @@ section {
     border-radius: 25px;
     position: relative;
     top: -10%;
+    font-weight: bold;
 }
 
 .card-apresentacao {
-    
+    max-width: 80rem;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border: 5px inset #1E1D67;
-    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.92);
-    color: #000;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
+    flex-direction: column;
     position: relative;
     padding: 3rem;
     row-gap: 1rem;
     align-self: center;
-    justify-content: center;
+    top: -20%;
 }
 
-
-    
+.img-apresentacao {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    position: relative;
+    margin: auto;
+    top: -10%;
+    background-size: cover;
+}
 
 #texto-apresentacao {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-}
-
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-}
-
-.img-apresentacao1 {
-    grid-area: 1 / 1 / 6 / 4;
-    height: 500px;
-}
-
-.img-apresentacao2 {
-    grid-area: 1 / 4 / 3 / 6;
-    height: 230px;
-}
-
-.img-apresentacao3 {
-    grid-area: 3 / 4 / 5 / 6;
-    height: 230px;
 }
 
 #secao-planos {
@@ -361,7 +338,6 @@ section {
     background-color: #1E1D67;
     height: 65px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     width: 100%;
@@ -387,11 +363,6 @@ section {
     margin: 0 10px;
 }
 
-.navbar-menu a {
-    color: #4DFF3E;
-    text-decoration: overline;
-    font-weight: bold;
-}
 
 .cadastro {
     background-color: #b7bafd;
@@ -426,7 +397,6 @@ section {
 .cadastro-cliente label {
     font-size: 2.5rem;
     font-weight: bold;
-    width: 200px;
 }
 
 .form-line {
@@ -436,7 +406,4 @@ section {
     gap: 2rem;
 }
 
-#endereco,
-#nome {
-    width: 840px;
-}
+

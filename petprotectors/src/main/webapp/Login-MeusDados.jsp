@@ -6,27 +6,27 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <link rel="shortcut icon" href="/assets/icons/icon-pegada-preta.ico" type="image/x-icon">
     <title>Pet Protectors - Meus Dados</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/styles-arealogada.css">
-    <link rel="stylesheet" href="/assets/css/formcliente.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles-arealogada.css">
+    <link rel="stylesheet" href="assets/css/formcliente.css">
 </head>
 
 <body>
 
     <div class="navbar">
-        <img src="/assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
-        <a href="#" class="navbar-brand">Pet Protectors</a>
+        <img src="assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
+        <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
     </div>
 
     <div class="sidebar">
         <div class="username">
             <img src="assets/images/user.png" alt="User Image">
-            <p>Nome do Usuário</p>
+            <p>${cliente.nome}</p>
         </div>
         <ul>
-            <li><a href="">Meus Dados</a></li>
-            <li><a href="">Meus Pets</a></li>
-            <li><a href="">Agendamentos</a></li>
+            <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
+            <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
+            <li><a href="Login-Agendamentos.html">Agendamentos</a></li>
             <li><a href="">Meu Plano</a></li>
             <li><a href="index.jsp">Sair</a></li>
         </ul>
@@ -36,32 +36,33 @@
             <div class="form-image">
                 <img src="assets/images/undraw_passing_by_0un9 (1).svg" alt="">
             </div>
+
             <div class="form">
                 <form action="">
                     <div class="input-group">
                         <div class="input-box">
                             <label for="nome">Nome</label>
-                            <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required>
+                            <input id="nome" type="text" name="nome" value="${cliente.nome}" readonly>
                         </div>
                         <div class="input-box">
                             <label for="cpf">CPF</label>
-                            <input id="cpf" type="text" name="cpf" placeholder="___.___.___-__" required>
+                            <input id="cpf" type="text" name="cpf" value="${cliente.cpf}" readonly>
                         </div>
                         <div class="input-box">
                             <label for="endereco">Endereço</label>
-                            <input id="endereco" type="text" name="endereco" placeholder="Digite o endereço" required>
+                            <input id="endereco" type="text" name="endereco" value="${cliente.endereco}" readonly>
                         </div>
                         <div class="input-box">
                             <label for="telefone">Tel / Cel</label>
-                            <input id="telefone" type="text" name="telefone" placeholder="(__)_____-____" required>
+                            <input id="telefone" type="text" name="telefone" value="${cliente.telefone}" readonly>
                         </div>
                         <div class="input-box">
                             <label for="email">E-mail</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                            <input id="email" type="email" name="email" value="${cliente.email}" readonly>
                         </div>
                         <div class="input-box">
                             <label for="senha">Senha</label>
-                            <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                            <input id="senha" type="password" name="senha" value="${cliente.senha}" readonly>
                         </div>
                     </div>
                     <div class="gender-inputs">
@@ -85,7 +86,7 @@
                     </div>
 
                     <div class="cadastrar-button">
-                        <button><a href="" class="botao">Cadastrar</a></button>
+                        <button><a href="EditarDados.jsp?nome=${cliente.nome}&cpf=${cliente.cpf}&endereco=${cliente.endereco}&telefone=${cliente.telefone}&email=${cliente.email}&senha=${cliente.senha}" class="botao">Editar</a></button>
                     </div>
                 </form>
             </div>

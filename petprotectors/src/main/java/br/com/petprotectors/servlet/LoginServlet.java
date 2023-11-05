@@ -31,8 +31,6 @@ public class LoginServlet extends HttpServlet {
 
         boolean isValidUser = new ClienteDao().verifyCredentials(cliente);
 
-        ListClienteServlet.setCliente(cliente);
-
         if (isValidUser) {
 
             req.getSession().setAttribute("loggedUser", email);

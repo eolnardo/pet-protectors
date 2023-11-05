@@ -14,30 +14,26 @@ import java.util.List;
 
 @WebServlet("/show-cliente")
 public class ListClienteServlet extends HttpServlet {
-    private static Cliente cliente;
+    private static String id = "";
 
-    public static Cliente getCliente() {
-        return cliente;
+    public static String getId() {
+        return id;
     }
 
-    public static void setCliente(Cliente cliente) {
-        ListClienteServlet.cliente = cliente;
+    public static void setId(String id) {
+        ListClienteServlet.id = id;
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String id = getCliente().getClienteId();
-
-        System.out.println(id);
-
-        Cliente cliente = new ClienteDao().exibirCliente(id);
+        Cliente cliente = new ClienteDao().exibirCliente(getId());
 
         System.out.println(cliente);
 
         req.setAttribute("cliente", cliente);
 
-        req.getRequestDispatcher("Login-Meus-Dados.jsp").forward(req, resp);
+        req.getRequestDispatcher("Login-MeusDados.jsp").forward(req, resp);
 
     }
 }

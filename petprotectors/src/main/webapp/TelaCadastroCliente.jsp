@@ -13,47 +13,22 @@
 
 <body style="background-color: #b7bafd;">
     <div class="navbar">
-        <img src="/assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
+        <img src="assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
         <a href="#" class="navbar-brand">Pet Protectors</a>
+        <!-- nessa tela não é necessário do menu hamburguer, um botao de voltar já está bom> -->
         <ul class="navbar-menu">
             <div class="hamburguer">
-                <div class="linha"></div>
-                <div class="linha"></div>
-                <div class="linha"></div>
+                <button><a href="index.jsp" class="botao"></a>Voltar</button>
             </div>
         </ul>
     </div>
-
-    <nav class="menu">
-        <ul>
-            <form action="/login" method="post">
-                <li>
-                    <span class="login">Usuário</span>
-                </li>
-                <li>
-                    <input class="login" type="email" id="email" name="email" value="">
-                </li>
-                <li>
-                    <span class="login">Senha</span>
-                </li>
-                <li>
-                    <input class="login" type="password" id="senha" name="senha" value="">
-                </li>
-                <li>
-                    <span> </span>
-                </li>
-            </form>
-            <button type="submit" class="botao verde" style="width: 25rem">Entrar</button>
-            <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
-        </ul>
-    </nav>
 
     <div class="container">
         <div class="form-image">
             <img src="assets/images/undraw_passing_by_0un9 (1).svg" alt="">
         </div>
         <div class="form">
-            <form action="">
+            <form action="create-usuario" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -62,27 +37,73 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nome">Nome</label>
-                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required>
+                        <input type="text" id="nome" name="nome" inputmode="text" placeholder="Digite seu nome"  value="${nome}"required>
+
                     </div>
                     <div class="input-box">
                         <label for="cpf">CPF</label>
-                        <input id="cpf" type="text" name="cpf" placeholder="___.___.___-__" required>
+                        <input id="cpf" type="text" name="cpf" placeholder="___.___.___-__" inputmode="numeric" pattern="\[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" maxlength="14" value="${cpf}" required>
+                        <script>
+                            const cpfInput = document.getElementById('cpf');
+
+                            cpfInput.addEventListener('input', () => {
+                                let value = cpfInput.value.replace(/\D/g, '');
+                                let formattedValue = '';
+
+                                for (let i = 0; i < value.length; i++) {
+                                    if (i === 3 || i === 6) {
+                                        formattedValue += '.';
+                                    } else if (i === 9) {
+                                        formattedValue += '-';
+                                    }
+                                    formattedValue += value[i];
+                                }
+
+                                cpfInput.value = formattedValue;
+                            });
+                        </script>
+
+                    </div>
+                    <div class="input-box">
+                        <label for="pets">Número de Pets</label>
+                        <input id="pets" type="text" name="pets" placeholder="Número de Pets:" inputmode="numeric" pattern="\[0-9]*" maxlength="20" value="${pets}" required>
                     </div>
                     <div class="input-box">
                         <label for="endereco">Endereço</label>
-                        <input id="endereco" type="text" name="endereco" placeholder="Digite o endereço" required>
+                        <input id="endereco" type="text" name="endereco" placeholder="Digite o endereço" value="${endereco}" required>
                     </div>
                     <div class="input-box">
                         <label for="telefone">Tel / Cel</label>
-                        <input id="telefone" type="text" name="telefone" placeholder="(__)_____-____" required>
+                        <input id="telefone" type="text" name="telefone" placeholder="(__)_____-____" inputmode="numeric" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" maxlength="14" value="${telefone}" required>
+                        <script>
+                            const telefoneInput = document.getElementById('telefone');
+
+                            telefoneInput.addEventListener('input', () => {
+                                let value = telefoneInput.value.replace(/\D/g, '');
+                                let formattedValue = '';
+
+                                for (let i = 0; i < value.length; i++) {
+                                    if (i === 0){
+                                        formattedValue += '(';
+                                    } else if (i === 2) {
+                                        formattedValue += ')';
+                                    } else if (i === 7) {
+                                        formattedValue += '-';
+                                    }
+                                    formattedValue += value[i];
+                                }
+
+                                telefoneInput.value = formattedValue;
+                            });
+                        </script>
                     </div>
                     <div class="input-box">
                         <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" value="${email}" required>
                     </div>
                     <div class="input-box">
                         <label for="senha">Senha</label>
-                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" value="${senha}" required>
                     </div>
                 </div>
                 <div class="gender-inputs">
@@ -106,7 +127,7 @@
                 </div>
 
                 <div class="cadastrar-button">
-                    <button><a href="" class="botao">Cadastrar</a></button>
+                    <button type="submit" class="botao">Cadastrar</button>
                 </div>
             </form>
         </div>

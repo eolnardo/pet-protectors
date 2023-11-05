@@ -35,7 +35,7 @@ public class PetDao {
 
         } catch (Exception e){
 
-            System.out.println("fail in database connection");
+            System.out.println("fail in database connection 3");
 
         }
     }
@@ -54,13 +54,13 @@ public class PetDao {
             preparedStatement.setString(1, petName);
             preparedStatement.execute();
 
-            System.out.println("success on delete car with id: " + petName);
+            System.out.println("success on delete pet with id: " + petName);
 
             connection.close();
 
         } catch (Exception e) {
 
-            System.out.println("fail in database connection");
+            System.out.println("fail in database connection 4");
 
         }
     }
@@ -103,7 +103,7 @@ public class PetDao {
 
         } catch (Exception e) {
 
-            System.out.println("fail in database connection");
+            System.out.println("fail in database connection 5");
 
             return Collections.emptyList();
         }

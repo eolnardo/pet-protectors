@@ -36,13 +36,12 @@
             <div class="form-image">
                 <img src="assets/images/undraw_passing_by_0un9 (1).svg" alt="">
             </div>
-
-            <div class="form">
+            <div class="form-dados">
                 <form action="">
                     <div class="input-group">
                         <div class="input-box">
                             <label for="nome">Nome</label>
-                            <input id="nome" type="text" name="nome" value="${cliente.nome}" readonly>
+                            <input id="nome" type="text" name="nome" placeholder="" value="${cliente.nome}" readonly>
                         </div>
                         <div class="input-box">
                             <label for="cpf">CPF</label>

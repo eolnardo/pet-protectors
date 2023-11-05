@@ -102,10 +102,12 @@ header {
     align-items: flex-start;
     gap: 2rem;
     height: 100vh;
+    width: 100%;
     background-image: url('../images/pouca-folha.jpg');
     background-size: cover;
     color: var(--color-default);
     padding: 21rem 11rem;
+    position: absolute;
 }
 
 h1,
@@ -157,8 +159,10 @@ span {
 
 section {
     display: flex;
+    height: 93vh;
     gap: 2rem;
     padding: 8.6rem;
+    width: 100%;
 }
 
 @keyframes zoom {
@@ -181,6 +185,11 @@ section {
     position: relative;
     top: -10%;
     font-weight: bold;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
 }
 
 .card-apresentacao {
@@ -219,6 +228,7 @@ section {
     display: flex;
     background: url('../images/muita-folha.jpg');
     height: 93vh;
+    width: 100%;
     justify-content: space-evenly;
     overflow: hidden;
 }
@@ -407,3 +417,122 @@ section {
 }
 
 
+.container{
+    margin-top: 5rem;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    background-color: #b7bafd;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-size: cover;
+}
+
+.form-image img{
+    width: 60rem;
+}
+
+.form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cccccc;
+    padding: 3rem;
+}
+
+.form-dados{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: wrap;
+    background-color: #cccccc;
+    padding: 3rem;
+}
+
+.form-dados form{
+    margin-left: 20px
+}
+
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+}
+
+.titulo{
+    background-color: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
+    justify-content: flex-start;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 25px;
+    position: relative;
+    top: -10%;
+    font-weight: bold;
+}
+
+.cadastrar-button button{
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    font-family: 'Inter';
+    width: 10rem;
+    height: 0.6rem;
+    background-color: #4DFF3E;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px #444444;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #303030;
+}
+
+.input-box label,
+.gender-title{
+
+}

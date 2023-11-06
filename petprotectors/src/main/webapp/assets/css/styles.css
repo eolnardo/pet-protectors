@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 :root {
@@ -24,6 +25,7 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
 .hamburguer {
@@ -98,16 +100,16 @@ li span {
 
 header {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
     height: 100vh;
     width: 100%;
+    max-width: 100%;
     background-image: url('../images/pouca-folha.jpg');
     background-size: cover;
     color: var(--color-default);
-    padding: 21rem 11rem;
-    position: absolute;
+    padding: 21rem;
+    margin-top: 65px;
 }
 
 h1,
@@ -159,6 +161,7 @@ span {
 
 section {
     display: flex;
+    margin-top: 10px;
     height: 93vh;
     gap: 2rem;
     padding: 8.6rem;
@@ -175,60 +178,49 @@ section {
     }
 }
 
-#titulo {
-    background-color: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
-    justify-content: flex-start;
-    max-width: fit-content;
-    height: fit-content;
-    padding: 15px;
-    border-radius: 25px;
-    position: relative;
-    top: -10%;
-    font-weight: bold;
-}
-
-.parent{
+.parent {
     display: flex;
     flex-direction: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
-.card-apresentacao {
-    max-width: 80rem;
-    text-align: center;
-    display: flex;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    flex-direction: column;
-    position: relative;
-    padding: 3rem;
-    row-gap: 1rem;
-    align-self: center;
-    top: -20%;
+.card-apresentacao1 {
+    grid-area: 1 / 1 / 5 / 3;
+    background-color: #fff;
+    border: 5px inset #1E1D67;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.92);
 }
 
-.img-apresentacao {
-    max-width: 200px;
-    height: 200px;
-    border-radius: 25px;
-    position: relative;
-    margin: auto;
-    top: -10%;
-    background-size: cover;
+.card-apresentacao2 {
+    grid-area: 1 / 3 / 3 / 6;
+    margin-top: 0;
+    background-color: #fff;
+    border: 5px inset #1E1D67;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.92);
 }
 
-#texto-apresentacao {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
+.card-apresentacao2 {
+    grid-area: 3 / 3 / 5 / 6;
+    background-color: #fff;
+    border: 5px inset #1E1D67;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.92);
+}
+
+#planos{
+    width: 100%;
+    margin-top: 0px;
 }
 
 #secao-planos {
     display: flex;
     background: url('../images/muita-folha.jpg');
+    background-size: cover;
     height: 93vh;
     width: 100%;
+    margin-top: 0;
     justify-content: space-evenly;
     overflow: hidden;
 }
@@ -373,7 +365,6 @@ section {
     margin: 0 10px;
 }
 
-
 .cadastro {
     background-color: #b7bafd;
     height: 100vh;
@@ -417,7 +408,7 @@ section {
 }
 
 
-.container{
+.container {
     margin-top: 5rem;
     width: 80%;
     height: 80vh;
@@ -429,7 +420,7 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
 }
 
-.form-image{
+.form-image {
     width: 50%;
     height: 100%;
     display: flex;
@@ -439,11 +430,11 @@ section {
     background-size: cover;
 }
 
-.form-image img{
+.form-image img {
     width: 60rem;
 }
 
-.form{
+.form {
     width: 50%;
     height: 100%;
     display: flex;
@@ -454,7 +445,7 @@ section {
     padding: 3rem;
 }
 
-.form-dados{
+.form-dados {
     width: 50%;
     height: 100%;
     display: flex;
@@ -465,16 +456,16 @@ section {
     padding: 3rem;
 }
 
-.form-dados form{
+.form-dados form {
     margin-left: 20px
 }
 
-.form-header{
+.form-header {
     margin-bottom: 3rem;
     display: flex;
 }
 
-.titulo{
+.titulo {
     background-color: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
     justify-content: flex-start;
     max-width: fit-content;
@@ -486,13 +477,13 @@ section {
     font-weight: bold;
 }
 
-.cadastrar-button button{
+.cadastrar-button button {
     text-decoration: none;
     border: none;
     border-radius: 50%;
 }
 
-.form-header h1::after{
+.form-header h1::after {
     content: '';
     display: block;
     font-family: 'Inter';
@@ -504,7 +495,7 @@ section {
     border-radius: 10px;
 }
 
-.input-group{
+.input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -516,7 +507,7 @@ section {
     flex-direction: column;
 }
 
-.input-box input{
+.input-box input {
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -524,15 +515,13 @@ section {
     box-shadow: 1px 2px 6px #444444;
 }
 
-.input-box input:hover{
+.input-box input:hover {
     background-color: #eeeeee;
 }
 
-.input-box input:focus-visible{
+.input-box input:focus-visible {
     outline: 1px solid #303030;
 }
 
 .input-box label,
-.gender-title{
-
-}
+.gender-title {}

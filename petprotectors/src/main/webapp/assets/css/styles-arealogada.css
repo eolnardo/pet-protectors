@@ -11,6 +11,11 @@ body{
     margin: 0;
 }
 
+.sidebar a{
+    text-decoration: none;
+    color: #000;
+}
+
 .sidebar {
     width: 20%;
     background-color: #fff;
@@ -24,6 +29,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     font-size: 22.5px;
+    row-gap: 15px;
 }
 
 .sidebar img{
@@ -41,29 +47,77 @@ body{
 
 .username{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    margin-left: 35px
 }
 
 .conteudo {
-    left: 0;
     width: 80%;
+    height: 100%;
     margin-left: 20%;
+    margin-top: 65px;
     background-color: #b7bafd;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
     position: fixed;
 }
 
-.conteudo .centralizado {
-    margin: 0 auto;
-    max-width: 800px;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.centralizado img{
+    height: 500px;
+    width: 500px;
+}
+.centralizado li{
+    margin-top: 20px;
+}
+
+.pet-card{
+    display: flex;
+    flex-direction: row;
+    background-color: #1E1D67;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.pet-card img{
+    height: 180px;
+    width: 180px;
+    margin-top: 10PX;
+    margin-left: 10px;
+}
+
+.card-info h2{
+    color: #4DFF3E;
+}
+
+.pet-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.pet-data{
+    display: flex;
+}
+
+.pet-data p, input{
+    width: 200px;
+}
+
+.pet-data p{
+    color: #4DFF3E;
+    font-weight: 500;
+}
+
+.pet-data input{
+    border-radius: 50px;
 }

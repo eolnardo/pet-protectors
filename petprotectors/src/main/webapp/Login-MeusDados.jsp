@@ -17,20 +17,21 @@
         <img src="assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
         <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
     </div>
-
-    <div class="sidebar">
-        <div class="username">
-            <img src="assets/images/user.png" alt="User Image">
-            <p>${cliente.nome}</p>
+    <form>
+        <div class="sidebar">
+            <div class="username">
+                <img src="assets/images/user.png" alt="User Image">
+                <p>${cliente.nome}</p>
+            </div>
+            <ul>
+                <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
+                <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
+                <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
+                <li><a href="">Meu Plano</a></li>
+                <li><a href="index.jsp">Sair</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
-            <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
-            <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
-            <li><a href="">Meu Plano</a></li>
-            <li><a href="index.jsp">Sair</a></li>
-        </ul>
-    </div>
+    </form>
     <div class="conteudo">
         <div class="container">
             <div class="form-image">

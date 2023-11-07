@@ -28,7 +28,9 @@
         <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
         <li><a href="Login-Agendamentos.html">Agendamentos</a></li>
         <li><a href="">Meu Plano</a></li>
-        <li><a href="index.jsp">Sair</a></li>
+        <c:if test="${sessionScope.loggedUser != null}">
+            <li><a href="/logout">Sair</a></li>
+        </c:if>
     </ul>
 </div>
 <div class="conteudo">

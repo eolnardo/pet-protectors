@@ -14,7 +14,7 @@
 <body style="background-color: #b7bafd;">
     <div class="navbar">
         <img src="assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
-        <a href="#" class="navbar-brand">Pet Protectors</a>
+        <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
         <!-- nessa tela não é necessário do menu hamburguer, um botao de voltar já está bom> -->
         <ul class="navbar-menu">
             <div class="hamburguer">

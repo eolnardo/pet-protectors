@@ -20,14 +20,18 @@
     <div class="sidebar">
         <div class="username">
             <img src="assets/images/user.png" alt="User Image">
-            <p>Usuário</p>
+            <c:if test="${sessionScope.loggedUser != null}">
+                <p>${cliente.nome}</p>
+            </c:if>
         </div>
         <ul>
             <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
             <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
             <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
             <li><a href="">Meu Plano</a></li>
-            <li><a href="index.jsp">Sair</a></li>
+            <c:if test="${sessionScope.loggedUser != null}">
+                <li><a href="/logout">Sair</a></li>
+            </c:if>
         </ul>
     </div>
     <div class="conteudo">

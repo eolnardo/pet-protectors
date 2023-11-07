@@ -6,44 +6,23 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(String nome, String tutor, String idade, String sexo, String especie, String raca, String id) {
+    public Pet(String nome, String idade, String sexo, String especie, String raca, String petId, String tutor) {
         this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.especie = especie;
+        this.raca = raca;
+        this.petId = petId;
         this.tutor = tutor;
-        this.idade = idade;
-        this.sexo = sexo;
-        this.especie = especie;
-        this.raca = raca;
-        this.id = id;
-    }
-
-    public Pet(String nome, String idade, String sexo, String especie, String raca, String id) {
-        this.nome = nome;
-        this.idade = idade;
-        this.sexo = sexo;
-        this.especie = especie;
-        this.raca = raca;
-        this.id = id;
-    }
-
-    public Pet(String nome, String tutor, Date dataNascimento, String idade, String sexo, String especie, String raca, String id) {
-        this.nome = nome;
-        this.tutor = tutor;
-        this.dataNascimento = dataNascimento;
-        this.idade = idade;
-        this.sexo = sexo;
-        this.especie = especie;
-        this.raca = raca;
-        this.id = id;
     }
 
     private String nome;
     private String tutor;
-    private Date dataNascimento;
     private String idade;
     private String sexo;
     private String especie;
     private String raca;
-    private String id;
+    private String petId;
 
     public String getNome() {
         return nome;
@@ -59,14 +38,6 @@ public class Pet {
 
     public void setTutor(String tutor) {
         this.tutor = tutor;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
     }
 
     public String getIdade() {
@@ -101,11 +72,24 @@ public class Pet {
         this.raca = raca;
     }
 
-    public String getId() {
-        return id;
+    public String getPetId() {
+        return petId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPetId(String petId) {
+        this.petId = petId;
+    }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "nome='" + nome + '\'' +
+                ", tutor='" + tutor + '\'' +
+                ", idade='" + idade + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", especie='" + especie + '\'' +
+                ", raca='" + raca + '\'' +
+                ", petId='" + petId + '\'' +
+                '}';
     }
 }

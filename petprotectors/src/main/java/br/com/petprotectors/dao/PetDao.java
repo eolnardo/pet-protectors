@@ -3,10 +3,7 @@ package br.com.petprotectors.dao;
 import br.com.petprotectors.model.Pet;
 import br.com.petprotectors.servlet.config.ConnectionPoolConfig;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,7 +11,7 @@ import java.util.List;
 public class PetDao {
 
     public void criarPet (Pet pet){
-        String SQL = "INSERT INTO PET (NOME, IDADE, SEXO, ESPECIE, RACA, TUTOR) VALUES (?,?,?,?,?,?)";
+        String SQL = "INSERT INTO PETS (NOME, IDADE, SEXO, ESPECIE, RACA, TUTOR) VALUES (?,?,?,?,?,?)";
 
         try {
 
@@ -29,14 +26,13 @@ public class PetDao {
             preparedStatement.setString(3, pet.getSexo());
             preparedStatement.setString(4, pet.getEspecie());
             preparedStatement.setString(5, pet.getRaca());
-            preparedStatement.setInt(6, 1);
+            preparedStatement.setString(6, pet.getTutor());
             preparedStatement.execute();
 
 
-        } catch (Exception e){
-
-            System.out.println("fail in database connection 3");
-
+        } catch (SQLException e) {
+            e.printStackTrace(); // Registre a exceção para diagnóstico.
+            System.out.println("Falha ao criar o pet no banco de dados: " + e.getMessage());
         }
     }
 
@@ -65,8 +61,8 @@ public class PetDao {
         }
     }
 
-    public List<Pet> findAllPets(){
-        String SQL = "SELECT * FROM PET";
+    public List<Pet> exibirPets(){
+        String SQL = "SELECT * FROM PETS WHERE TUTOR = ?";
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -81,15 +77,15 @@ public class PetDao {
 
             while (resultSet.next()) {
 
-                String petNome = resultSet.getString("name");
+                String petNome = resultSet.getString("nome");
                 String petTutor = resultSet.getString("tutor");
                 String petIdade = resultSet.getString("idade");
                 String petSexo = resultSet.getString("sexo");
                 String petEspecie = resultSet.getString("especie");
                 String petRaca = resultSet.getString("raca");
-                String petId = resultSet.getString("idPet");
+                String petId = resultSet.getString("petId");
 
-                Pet pet = new Pet(petNome, petTutor,petIdade, petSexo,petEspecie,petRaca, petId);
+                Pet pet = new Pet(petNome, petIdade, petSexo,petEspecie,petRaca, petId, petTutor);
 
                 pets.add(pet);
 

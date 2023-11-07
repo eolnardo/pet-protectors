@@ -29,7 +29,7 @@
                     <p>Cadastro Pet</p>
                 </div>
                 <div class="form-line">
-                    <input type="hidden" id="idPet" name="idPet" value="${param.idPet}">
+                    <input type="hidden" id="petId" name="petId" value="${param.petId}">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" value="${param.nome}"><br><br>
                 </div>
@@ -44,7 +44,7 @@
                     <label for="especie">Espécie:</label>
                     <input type="text" id="especie" name="especie" value="${param.especie}"><br><br>
                     <label for="raca">Raça:</label>
-                    <input type="email" id="raca" name="raca" value="${param.raca}"><br><br>
+                    <input type="raca" id="raca" name="raca" value="${param.raca}"><br><br>
                 </div>
                 <div>
                     <a href="index.jsp" class="botao cinza">Voltar</a>

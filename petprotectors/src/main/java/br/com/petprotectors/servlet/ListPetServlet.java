@@ -17,7 +17,7 @@ public class ListPetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Pet> pets = new PetDao().findAllPets();
+        List<Pet> pets = new PetDao().exibirPets();
 
         req.setAttribute("pets", pets);
 

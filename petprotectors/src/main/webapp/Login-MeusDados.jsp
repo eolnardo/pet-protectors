@@ -26,7 +26,7 @@
         <ul>
             <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
             <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
-            <li><a href="Login-Agendamentos.html">Agendamentos</a></li>
+            <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
             <li><a href="">Meu Plano</a></li>
             <li><a href="index.jsp">Sair</a></li>
         </ul>
@@ -37,9 +37,11 @@
                 <img src="assets/images/undraw_Dog_c7i6.png" alt="">
             </div>
             <div class="form-dados">
-                <form action="">
+                <form action="update-usuario" method="get">
                     <div class="input-group">
                         <div class="input-box">
+                            <input type="hidden" id="clienteId" name="clienteId" value="${cliente.clienteId}">
+
                             <label for="nome">Nome</label>
                             <input id="nome" type="text" name="nome" placeholder="" value="${cliente.nome}" readonly>
                         </div>
@@ -85,7 +87,7 @@
                     </div>
 
                     <div class="cadastrar-button">
-                        <button><a href="EditarDados.jsp?nome=${cliente.nome}&cpf=${cliente.cpf}&endereco=${cliente.endereco}&telefone=${cliente.telefone}&email=${cliente.email}&senha=${cliente.senha}" class="botao">Editar</a></button>
+                        <button type="submit" class="botao">Editar</button>
                     </div>
                 </form>
             </div>

@@ -37,7 +37,7 @@
             <img src="assets/images/undraw_passing_by_0un9 (1).svg" alt="">
         </div>
         <div class="form">
-            <form action="">
+            <form action="update-usuario" method="post">
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nome">Nome</label>

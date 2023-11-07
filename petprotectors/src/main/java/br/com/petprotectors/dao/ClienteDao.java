@@ -140,4 +140,37 @@ public class ClienteDao {
 
         }
 }
+
+    public void atualizarCliente(Cliente cliente) {
+
+        String SQL = "UPDATE CLIENTE SET NOME = ?, ENDERECO = ?, TELEFONE = ?, EMAIL = ?, SENHA = ? WHERE CLIENTEID = ?";
+
+        try {
+
+
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, cliente.getNome());
+            preparedStatement.setString(2, cliente.getEndereco());
+            preparedStatement.setString(3, cliente.getTelefone());
+            preparedStatement.setString(4, cliente.getEmail());
+            preparedStatement.setString(5, cliente.getSenha());
+            preparedStatement.setString(6, cliente.getClienteId());
+            preparedStatement.execute();
+
+            System.out.println("success in update cliente");
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection 6");
+            System.out.println("Error: " + e.getMessage());
+
+        }
+
+    }
+
 }

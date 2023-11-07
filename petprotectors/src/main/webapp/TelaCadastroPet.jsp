@@ -22,28 +22,6 @@
         </ul>
     </div>
 
-    <nav class="menu">
-        <ul>
-            <li>
-                <span class="login">Usuário</span>
-                <input type="email" id="email" name="email" value="${cliente.email}">
-            </li>
-            <li>
-                <textarea></textarea>
-            </li>
-            <li>
-                <span class="login">Senha</span>
-                <input type="password" id="senha" name="senha" value="${cliente.senha}">
-            </li>
-            <li>
-                <textarea></textarea>
-            </li>
-            <span> </span>
-            <a href="" class="botao verde" style="width: 25rem">Entrar</a>
-            <a href="" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
-        </ul>
-    </nav>
-
     <section class="cadastro">
         <form action="/create-pet" method="post">
             <div class="cadastro-cliente">
@@ -69,12 +47,13 @@
                     <input type="email" id="raca" name="raca" value="${param.raca}"><br><br>
                 </div>
                 <div>
-                    <a href="" class="botao cinza">Voltar</a>
-                    <a href="Login-MeusPets.jsp" class="botao verde">Cadastrar</a>
+                    <a href="index.jsp" class="botao cinza">Voltar</a>
+                    <button type="submit" class="botao verde">Cadastrar</button>
                 </div>
             </div>
         </form>
 
+        <!--
         <div class="container">
             <div class="form-image">
                 <img src="assets/images/undraw_Dog_walking_re_l61p.png" alt="">
@@ -134,6 +113,7 @@
                 </form>
             </div>
         </div>
+        -->
 
     </section>
 

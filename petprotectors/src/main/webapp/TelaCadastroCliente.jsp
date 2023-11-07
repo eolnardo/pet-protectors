@@ -37,6 +37,7 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nome">Nome</label>
+                        <input type="hidden" id="clienteId" name="clienteId" value="${clienteId}">
                         <input type="text" id="nome" name="nome" inputmode="text" placeholder="Digite seu nome"  value="${nome}"required>
 
                     </div>
@@ -60,6 +61,28 @@
                                 }
 
                                 cpfInput.value = formattedValue;
+                            });
+                        </script>
+
+                    </div>
+                    <div class="input-box">
+                        <label for="nascimento">Nascimento</label>
+                        <input id="nascimento" type="text" name="nascimento" placeholder="  /  /    " inputmode="numeric" pattern="\d{2}/\d{2}/\d{4}" maxlength="10" value="${nascimento}" required>
+                        <script>
+                            const nascimentoInput = document.getElementById('nascimento');
+
+                            nascimentoInput.addEventListener('input', () => {
+                                let value = nascimentoInput.value.replace(/\D/g, '');
+                                let formattedValue = '';
+
+                                for (let i = 0; i < value.length; i++) {
+                                    if (i === 2 || i === 4) {
+                                        formattedValue += '/';
+                                    }
+                                    formattedValue += value[i];
+                                }
+
+                                nascimentoInput.value = formattedValue;
                             });
                         </script>
 

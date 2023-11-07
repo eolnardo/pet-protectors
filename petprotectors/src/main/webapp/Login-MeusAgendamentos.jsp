@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <link rel="shortcut icon" href="assets/icons/icon-pegada.ico" type="image/x-icon">
-    <title>Pet Protectors - Meus Pets</title>
+    <title>Pet Protectors - Agendamentos</title>
     <link rel="stylesheet" href="assets/css/styles-arealogada.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -25,7 +25,7 @@
         <ul>
             <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
             <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
-            <li><a href="Login-Agendamentos.html">Agendamentos</a></li>
+            <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
             <li><a href="">Meu Plano</a></li>
             <li><a href="index.jsp">Sair</a></li>
         </ul>
@@ -41,18 +41,18 @@
                             <div class="pet-info">
                                 <div class="info-row">
                                     <div class="pet-data">
-                                        <p>Nascimento:</p>
+                                        <p>Local:</p>
                                         <input type="text" readonly>
-                                        <p>Sexo:</p>
-                                        <input type="text" readonly>
+                                        <p>Data:</p>
+                                        <input type="date" placeholder="__/__/____" readonly>
                                     </div>
                                 </div>
                                 <div class="info-row">
                                     <div class="pet-data">
-                                        <p>Espécie:</p>
+                                        <p style="font-size: 2.5rem;">Especialidade:</p>
                                         <input type="text" readonly>
-                                        <p>Raça:</p>
-                                        <input type="text" readonly>
+                                        <p>Horário:</p>
+                                        <input type="time" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -61,8 +61,8 @@
                 </li>
                 <li>
                     <div>
-                        <a href="" class="botao cinza">Excluir</a>
-                        <a href="" class="botao verde">Adicionar Pet</a>
+                        <a href="" class="botao cinza">Cancelar</a>
+                        <a href="" class="botao verde">Novo</a>
                     </div>
                 </li>
             </ul>

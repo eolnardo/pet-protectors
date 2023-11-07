@@ -38,7 +38,10 @@ public class ClienteServlet extends HttpServlet {
             clienteDao.criarCliente(cliente);
 
             ListClienteServlet.setId(cliente.getClienteId());
+        } else {
+            clienteDao.atualizarCliente(cliente);
         }
+
 
         req.getRequestDispatcher("cadastrado.html").forward(req, resp);
     }

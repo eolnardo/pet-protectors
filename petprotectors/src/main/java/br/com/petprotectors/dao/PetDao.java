@@ -61,7 +61,7 @@ public class PetDao {
         }
     }
 
-    public List<Pet> exibirPets(){
+    public List<Pet> exibirPets(String Id){
         String SQL = "SELECT * FROM PETS WHERE TUTOR = ?";
         try {
 
@@ -70,6 +70,7 @@ public class PetDao {
             System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, Id);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 

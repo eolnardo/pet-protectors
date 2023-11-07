@@ -11,17 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/find-all-pets")
+@WebServlet("/show-pets")
 public class ListPetServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Pet> pets = new PetDao().exibirPets();
+        List<Pet> pets = new PetDao().exibirPets(ListClienteServlet.getId());
 
         req.setAttribute("pets", pets);
 
-        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+        req.getRequestDispatcher("Login-MeusPets.jsp").forward(req, resp);
 
     }
 }

@@ -47,7 +47,7 @@
                     <input type="raca" id="raca" name="raca" value="${param.raca}"><br><br>
                 </div>
                 <div>
-                    <a href="index.jsp" class="botao cinza">Voltar</a>
+                    <a href="Login-MeusPets.jsp" class="botao cinza">Voltar</a>
                     <button type="submit" class="botao verde">Cadastrar</button>
                 </div>
             </div>

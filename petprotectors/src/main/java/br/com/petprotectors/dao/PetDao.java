@@ -98,10 +98,9 @@ public class PetDao {
 
             return pets;
 
-        } catch (Exception e) {
-
-            System.out.println("fail in database connection 5");
-
+        } catch (SQLException e) {
+            e.printStackTrace(); // Registre a exceção para diagnóstico.
+            System.out.println("Falha ao criar o pet no banco de dados: " + e.getMessage());
             return Collections.emptyList();
         }
     }

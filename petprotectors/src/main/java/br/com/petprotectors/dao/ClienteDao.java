@@ -6,9 +6,6 @@ import br.com.petprotectors.servlet.ListClienteServlet;
 import br.com.petprotectors.servlet.config.ConnectionPoolConfig;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class ClienteDao {
 

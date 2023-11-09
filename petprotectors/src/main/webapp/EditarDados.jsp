@@ -8,7 +8,7 @@
     <title>Pet Protectors - Meus Dados</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/styles-arealogada.css">
-    <link rel="stylesheet" href="assets/css/formcliente.css">
+    <link rel="stylesheet" href="assets/css/formclientelogado.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
         <div class="form-image">
             <img src="assets/images/undraw_passing_by_0un9 (1).svg" alt="">
         </div>
-        <div class="form">
+        <div class="form" style="background-color: #1E1D67;">
             <form action="update-usuario" method="post">
                 <div class="input-group">
                     <div class="input-box">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="cadastrar-button">
-                    <button type="submit" class="botao">Atualizar</button>
+                    <button type="submit" class="botao verde" style="padding: 10px;">Atualizar</button>
                 </div>
             </form>
         </div>

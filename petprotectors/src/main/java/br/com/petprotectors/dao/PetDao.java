@@ -1,6 +1,8 @@
 package br.com.petprotectors.dao;
 
+import br.com.petprotectors.model.Cliente;
 import br.com.petprotectors.model.Pet;
+import br.com.petprotectors.servlet.ListPetServlet;
 import br.com.petprotectors.servlet.config.ConnectionPoolConfig;
 
 import java.sql.*;
@@ -75,6 +77,7 @@ public class PetDao {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             List<Pet> pets = new ArrayList<>();
+            List<String> IDs = new ArrayList<>();
 
             while (resultSet.next()) {
 
@@ -90,7 +93,14 @@ public class PetDao {
 
                 pets.add(pet);
 
+
             }
+
+            for (int i = 0; i < pets.size(); i++){
+                IDs.add(pets.get(i).getPetId());
+            }
+
+            ListPetServlet.setIDs(IDs);
 
             System.out.println("success in select * pet");
 
@@ -103,6 +113,38 @@ public class PetDao {
             System.out.println("Falha ao criar o pet no banco de dados: " + e.getMessage());
             return Collections.emptyList();
         }
+    }
+
+    public void atualizarPet(Pet pet, List IDs) {
+
+        String SQL = "UPDATE PET SET NOME = ?, IDADE = ?,SEXO = ?, ESPECIE = ?, RACA = ? WHERE PETID = ?";
+
+        try {
+
+
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, pet.getNome());
+            preparedStatement.setString(2, pet.getIdade());
+            preparedStatement.setString(3, pet.getSexo());
+            preparedStatement.setString(4, pet.getEspecie());
+            preparedStatement.setString(5, pet.getRaca());
+            preparedStatement.setString(6, IDs.get());
+            preparedStatement.execute();
+
+            System.out.println("success in update pet");
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection 6(pet)");
+            System.out.println("Error: " + e.getMessage());
+
+        }
+
     }
 
 

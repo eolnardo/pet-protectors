@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
@@ -26,7 +25,7 @@
 
     <nav class="menu">
         <ul>
-            <form action="login" method="post">
+            <form id="login" action="login" method="post">
                 <li>
                     <span class="login">Usuário</span>
                 </li>
@@ -40,30 +39,29 @@
                     <input class="login" type="password" id="senha" name="senha" value="${param.senha}">
                 </li>
                 <li>
-                    <span> </span>
+                    <button type="submit" class="botao verde" style="width: 25rem">Entrar</button>
                 </li>
-                <button type="submit" class="botao verde" style="width: 25rem">Entrar</button>
             </form>
             <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
         </ul>
     </nav>
 
-    <header>
-        <div class="parent">
-            <div class="card-apresentacao1">
-                <h1>Pet Protectors</h1>
-                <span>O serviço de cuidados que traz para o seu animal de estimação uma vida longa e saudável</span>
-                <a href="#secao-planos" class="botao verde">Conheça os planos!</a>
-            </div>
-            <div class="card-apresentacao2">
-                <h1>Pet Protectors</h1>
-            </div>
-            <div class="card-apresentacao3">
-                <h1>Pet Protectors</h1>
-            </div>
-        </div>
-    </header>
+<header>
 
+    <div class="parent">
+        <div class="card-apresentacao1">
+            <h1>Pet Protectors</h1>
+            <span>O serviço de cuidados que traz para o seu animal de estimação uma vida longa e saudável</span>
+            <a href="#planos" class="botao verde">Conheça os planos!</a>
+        </div>
+        <div class="card-apresentacao2">
+            <h1>A colocar conteúdo</h1>
+        </div>
+        <div class="card-apresentacao3">
+            <h1>A colocar conteúdo</h1>
+        </div>
+    </div>
+</header>
     <section id="planos">
         <div id="secao-planos">
             <ul>

@@ -49,6 +49,8 @@
                                 <div class="card-info">
                                     <h2>${pet.nome}</h2>
                                     <div class="pet-info">
+                                        <input id="id" type="hidden" name="id" placeholder=""
+                                               value="${pet.petId}" readonly>
                                         <div class="info-row">
                                             <div class="pet-data">
                                                 <p>Idade:</p>
@@ -65,11 +67,14 @@
                                                 <input id="especie" type="text" name="especie" placeholder=""
                                                        value="${pet.especie}" readonly>
                                                 <p>Raça:</p>
+
                                                 <input id="raca" type="text" name="raca" placeholder="" value="${pet.raca}"
                                                        readonly>
                                             </div>
                                         </div>
                                     </div>
+                                    <a href="TelaEditarPet.jsp?petId=${pet.petId}&nome=${pet.nome}&idade=${pet.idade}&sexo=${pet.sexo}&raca=${pet.raca}&especie=${pet.especie}" class="botao cinza">Update</a>
+                                    <a href="" class="botao cinza">Excluir</a>
                                 </div>
                             </div>
                         </c:forEach>

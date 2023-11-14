@@ -40,7 +40,7 @@ public class PetDao {
 
     public void deletePetByName(String petName){
 
-        String SQL = "DELETE PET WHERE NAME = ?";
+        String SQL = "DELETE PETS WHERE PETID = ?";
 
         try {
 
@@ -115,9 +115,9 @@ public class PetDao {
         }
     }
 
-    public void atualizarPet(Pet pet, List IDs) {
+    public void atualizarPet(Pet pet) {
 
-        String SQL = "UPDATE PET SET NOME = ?, IDADE = ?,SEXO = ?, ESPECIE = ?, RACA = ? WHERE PETID = ?";
+        String SQL = "UPDATE PETS SET NOME = ?, IDADE = ?,SEXO = ?, ESPECIE = ?, RACA = ? WHERE PETID = ?";
 
         try {
 
@@ -131,7 +131,7 @@ public class PetDao {
             preparedStatement.setString(3, pet.getSexo());
             preparedStatement.setString(4, pet.getEspecie());
             preparedStatement.setString(5, pet.getRaca());
-            preparedStatement.setString(6, IDs.get());
+            preparedStatement.setString(6, pet.getPetId());
             preparedStatement.execute();
 
             System.out.println("success in update pet");

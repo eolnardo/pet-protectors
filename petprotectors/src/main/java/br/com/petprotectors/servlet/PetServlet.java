@@ -35,8 +35,12 @@ public class PetServlet extends HttpServlet {
             System.out.println(pet);
             petDao.criarPet(pet);
         }
+         else {
+            petDao.atualizarPet(pet);
+        }
+
 
         System.out.println("tchau");
-        req.getRequestDispatcher("TelaCadastroPet.jsp").forward(req, resp);
+        req.getRequestDispatcher("Login-MeusPets.jsp").forward(req, resp);
     }
 }

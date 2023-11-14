@@ -446,3 +446,41 @@ section {
     justify-content: space-evenly;
     gap: 2rem;
 }
+
+.plano-atual {
+    border: 5px inset #1E1D67;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.opcoes {
+    display: flex;
+    gap: 20px;
+}
+
+.botao-vermelho{
+    padding: 1.5rem 3rem;
+    border-radius: 30px;
+    font-size: 2rem;
+    text-decoration: none;
+    background: linear-gradient(90deg, #910000 0%, #FF0000 100%);
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.botao:hover {
+    background: linear-gradient(90deg, #590000 0%, #8b0000 100%);
+}
+
+.botao-mudar {
+    background: linear-gradient(90deg, #dc9900 0%, #FFFF00 100%);
+    color: #000;
+}
+
+.botao-mudar:hover {
+    background: linear-gradient(90deg, #a67900 0%, #e6e600 100%);
+}

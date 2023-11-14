@@ -82,7 +82,7 @@
                                 <p>Atendimento à domicílio</p>
                             </div>
                             <h4>R$ 34,99</h4>
-                            <a href="" class="botao verde">Assinar</a>
+                            <a href="AssinarPlanoBasico.jsp" class="botao verde">Assinar</a>
                         </div>
                     </li>
                     <li>
@@ -100,7 +100,7 @@
                                 <p>Exames básicos e de imagem</p>
                             </div>
                             <h4>R$ 69,99</h4>
-                            <a href="" class="botao verde">Assinar</a>
+                            <a href="AssinarPlanoMid.jsp" class="botao verde">Assinar</a>
                         </div>
                     </li>
                     <li>
@@ -120,7 +120,7 @@
                                 <p>Processos cirúrgicos</p>
                             </div>
                             <h4>R$ 99,99</h4>
-                            <a href="" class="botao verde">Assinar</a>
+                            <a href="AssinarPlanoPremium.jsp" class="botao verde">Assinar</a>
                         </div>
                     </li>
                 </ul>

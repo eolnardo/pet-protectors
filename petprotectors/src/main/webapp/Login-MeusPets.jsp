@@ -44,12 +44,13 @@
                 <table>
                     <tr>
                         <c:forEach var="pet" items="${pets}">
+                        <form action="/deletarPet" method="post">
                             <div class="pet-card">
                                 <img src="assets/images/pata.png" alt="Pet Image">
                                 <div class="card-info">
                                     <h2>${pet.nome}</h2>
                                     <div class="pet-info">
-                                        <input id="id" type="hidden" name="id" placeholder=""
+                                        <input id="petId" type="hidden" name="petId" placeholder=""
                                                value="${pet.petId}" readonly>
                                         <div class="info-row">
                                             <div class="pet-data">
@@ -73,10 +74,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="TelaEditarPet.jsp?petId=${pet.petId}&nome=${pet.nome}&idade=${pet.idade}&sexo=${pet.sexo}&raca=${pet.raca}&especie=${pet.especie}" class="botao cinza">Update</a>
-                                    <a href="" class="botao cinza">Excluir</a>
+                                    <a href="TelaEditarPet.jsp?petId=${pet.petId}&nome=${pet.nome}&idade=${pet.idade}&sexo=${pet.sexo}&raca=${pet.raca}&especie=${pet.especie}" class="botao cinza">Editar</a>
+                                    <button type="submit" class="botao cinza">Excluir</button>
                                 </div>
                             </div>
+                        </form>
                         </c:forEach>
                     </tr>
                 </table>

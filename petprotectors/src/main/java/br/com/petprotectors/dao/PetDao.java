@@ -38,7 +38,7 @@ public class PetDao {
         }
     }
 
-    public void deletePetByName(String petName){
+    public void deletePetByName(String petId){
 
         String SQL = "DELETE PETS WHERE PETID = ?";
 
@@ -49,10 +49,10 @@ public class PetDao {
             System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1, petName);
+            preparedStatement.setString(1, petId);
             preparedStatement.execute();
 
-            System.out.println("success on delete pet with id: " + petName);
+            System.out.println("success on delete pet with id: " + petId);
 
             connection.close();
 

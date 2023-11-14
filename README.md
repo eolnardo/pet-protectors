@@ -1,4 +1,4 @@
-# PI3_Projeto
+# Pet-Protectors
 Projeto Integrador III - Prof. Enoque Leal
 
 ### Membros:

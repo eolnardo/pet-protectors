@@ -145,6 +145,7 @@ span {
 }
 
 .botao {
+    margin-top: 30px;
     text-align: center;
     padding: 0.8rem 6rem;
     margin-bottom: 10px;
@@ -345,7 +346,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
 }
 
 .card-info h3,

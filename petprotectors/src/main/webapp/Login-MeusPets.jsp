@@ -37,13 +37,19 @@
         <li><a href="index.jsp">Sair</a></li>
     </ul>
 </div>
-<div class="conteudo">
-    <div class="centralizado">
+<div class="conteudo" style="overflow: auto;">
+    <div class="centralizado t">
         <ul>
             <li>
-                <table>
+                <div>
+                    <a href="TelaCadastroPet.jsp" class="botao verde">Adicionar Pet</a>
+                </div>
+            </li>
+            <li>
+                <table style="overflow: auto;">
                     <tr>
                         <c:forEach var="pet" items="${pets}">
+                            <span style="color: deeppink;"> ⊂(◉‿◉) </span>
                         <form action="/deletarPet" method="post">
                             <div class="pet-card">
                                 <img src="assets/images/pata.png" alt="Pet Image">
@@ -83,12 +89,7 @@
                     </tr>
                 </table>
             </li>
-            <li>
-                <div>
-                    <a href="" class="botao cinza">Excluir</a>
-                    <a href="TelaCadastroPet.jsp" class="botao verde">Adicionar Pet</a>
-                </div>
-            </li>
+
         </ul>
     </div>
 </div>

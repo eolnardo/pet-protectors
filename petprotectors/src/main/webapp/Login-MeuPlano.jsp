@@ -8,41 +8,6 @@
     <link rel="stylesheet" href="assets/css/styles-arealogada.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Meu Plano</title>
-    <style>
-        /* Copie todas as propriedades CSS fornecidas aqui */
-
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            list-style: none;
-            font-family: var(--font-default);
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-color: #1E1D67;
-            color: #fff;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Adicione outras propriedades específicas da sua página aqui */
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
-
-
-    </style>
 </head>
 <body>
     <div class="navbar">
@@ -64,9 +29,7 @@
                 </c:if>
             </ul>
         </div>
-        <div>
-            <h1>Minha Conta</h1>
-
+        <div class="conteudo">
             <div class="plano-atual">
                 <h2>Plano Atual</h2>
                 <p>${plano.nome}</p>
@@ -74,10 +37,9 @@
                 <p>${plano.nome}</p>
                 <p>${plano.preco}</p>
             </div>
-
             <div class="opcoes">
-                <a href="#" class="botao-vermelho">Cancelar Assinatura</a>
-                <a href="#" class="botao-mudar">Mudar Plano</a>
+                <a href="#" class="botao vermelho">Cancelar</a>
+                <a href="#" class="botao amarelo">Mudar Plano</a>
             </div>
         </div>
     </body>

@@ -3,12 +3,7 @@ package br.com.petprotectors.model;
 import java.util.Date;
 
 public class Agendamento {
-
-
-
-
-
-
+private String agendamentoId;
     public Agendamento(Date dataHora, Cliente cliente, Pet pet){
         this.dataHora = dataHora;
         this.cliente = cliente;
@@ -24,7 +19,16 @@ public class Agendamento {
 
     }
 
+    public Agendamento(java.sql.Date dataHora, String clienteId, String petId) {
+    }
 
+    public String getId(){
+
+        return agendamentoId;
+    }
+    public boolean isEmpty(){
+        return this.agendamentoId.isEmpty();
+    }
     public Date getDataHora() {
         return dataHora;
     }
@@ -57,5 +61,7 @@ public class Agendamento {
                 ", pet=" + pet +
                 '}';
     }
+
+
 }
 

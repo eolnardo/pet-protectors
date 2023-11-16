@@ -78,7 +78,36 @@ public class AgendamentoDao {
 
     }
 
+public void atualizarAgendamento(Agendamento agendamento){
+        String SQL = "SELECT A.dataHora, C.nome as nomeCliente, P.nome as nomePet " +
+            "FROM AGENDAMENTO A " +
+            "JOIN CLIENTE C ON A.clienteId = C.clienteId " +
+            "JOIN PET P ON A.petId = P.petId " +
+            "WHERE C.clienteId = ?";
+    try {
 
+
+        Connection connection = ConnectionPoolConfig.getConnection();
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+        preparedStatement.setString(1, agendamento.getDataHora().toString());
+        preparedStatement.setString(2, String.valueOf(agendamento.getCliente()));
+        preparedStatement.setString(3, String.valueOf(agendamento.getPet()));
+
+        preparedStatement.execute();
+
+        System.out.println("success in update cliente");
+
+        connection.close();
+
+    } catch (Exception e) {
+
+        System.out.println("fail in database connection 6");
+        System.out.println("Error: " + e.getMessage());
+
+    }
+}
 
 
 

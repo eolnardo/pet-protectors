@@ -18,7 +18,7 @@
 
             <div class="navbar">
                 <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
-                <a href="#" class="navbar-brand">Pet Protectors</a>
+                <a href="index.jsp" class="navbar-brand" style="background-color: #1E1D67;">Pet Protectors</a>
             </div>
 
             <div class="sidebar">
@@ -47,11 +47,6 @@
             <div class="conteudo" style="overflow: auto;">
                 <div class="centralizado t">
                     <ul>
-                        <li>
-                            <div>
-                                <a href="TelaCadastroPet.jsp" class="botao verde">Adicionar Pet</a>
-                            </div>
-                        </li>
                         <li>
                             <table style="overflow: auto;">
                                 <tr>
@@ -88,8 +83,9 @@
                                                 </div>
                                             </div>
                                             <a href="TelaEditarPet.jsp?petId=${pet.petId}&nome=${pet.nome}&idade=${pet.idade}&sexo=${pet.sexo}&raca=${pet.raca}&especie=${pet.especie}"
-                                                class="botao amarelo">Editar</a>
+                                                class="botao azul">Editar</a>
                                             <button type="submit" class="botao vermelho">Excluir</button>
+                                            <a href="TelaCadastroPet.jsp" class="botao verde">Adicionar Pet</a>
                                         </form>
                                     </c:forEach>
                                 </tr>

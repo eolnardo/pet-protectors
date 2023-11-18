@@ -94,6 +94,16 @@ a:hover {
     right: 0;
 }
 
+.sidebar button, a{
+    text-decoration: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: 100;
+    background-color: white;
+    cursor: pointer;
+    font: var(--font-heading);
+}
+
 li span {
     font-size: 3rem;
     font-weight: bold;
@@ -113,14 +123,14 @@ li input {
 header {
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
     height: 100vh;
     width: 100%;
-    background-image: url('../images/pouca-folha.jpg');
+    background-image: url("../images/fundo-verde.jpg");
     background-size: cover;
+    /* background: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%); */
     color: var(--color-default);
     padding: 21rem;
-    margin-top: 65px;
+    margin-top: 5rem;
 }
 
 h1,
@@ -146,6 +156,7 @@ span {
 
 .botao {
     margin-top: 30px;
+    max-height: 55px;
     text-align: center;
     padding: 0.8rem 6rem;
     margin-bottom: 10px;
@@ -175,8 +186,25 @@ span {
     background: linear-gradient(90deg, #910000 0%, #FF0000 100%);
 }
 
+.vermelho:hover {
+    color: #000;
+    background: linear-gradient(90deg, #590000 0%, #8b0000 100%);
+}
+
 .amarelo {
     background: linear-gradient(90deg, #dc9900 0%, #FFFF00 100%);
+}
+
+.amarelo:hover {
+    background: linear-gradient(90deg, #a67900 0%, #e6e600 100%);
+}
+
+.azul {
+    background: linear-gradient(90deg, #0e0d30 0%, #1E1D67);
+}
+
+.azul:hover {
+    background: linear-gradient(90deg, #09081f 0%, #0e0d30);
 }
 
 section {
@@ -199,39 +227,52 @@ section {
 }
 
 .parent {
-    background-image: url("/src/main/webapp/assets/images/pouca-folha.jpg");
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 20px;
-    margin-top: -110px;
+    margin-top: -16rem;
     background: none;
     color: #000;
 }
 
+h3{
+    color: #000;
+}
+
 .parent h1{
-    font-size: 40px;
+    color: #000;
+    text-align: justify;
+    justify-content: center;
+    align-self: center;
 }
 
 .parent span {
     font-size: 20px;
     text-align: justify;
+    color: #000;
 }
 
 .card-apresentacao1 {
-    height: 400px;
+    height: 480px;
     grid-area: 1 / 1 / 5 / 3;
+    background-image: url("../images/undraw_Doctors_p6aq.png");
+    background-size: cover;
 }
 
 .card-apresentacao2 {
     grid-area: 1 / 3 / 3 / 6;
     margin-top: 0;
+    background-image: url("../images/undraw_Dog_c7i6.png");
+    background-size: cover;
 }
 
 .card-apresentacao3 {
     grid-area: 3 / 3 / 5 / 6;
+    background-image: url("../images/undraw_Cat_epte.png");
+    background-size: cover;
 }
 
 .card-apresentacao1, .card-apresentacao2, .card-apresentacao3 {
@@ -244,6 +285,46 @@ section {
     border: 5px inset #1E1D67;
     border-radius: 20px;
     padding: 15px;
+}
+
+.card-apresentacao1 li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.card-apresentacao2 li{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-apresentacao3 li{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-apresentacao1 li, 
+.card-apresentacao2 li,
+.card-apresentacao3 li{
+    opacity: 0;
+}
+
+.card-apresentacao1 li:hover, 
+.card-apresentacao2 li:hover,
+.card-apresentacao3 li:hover{
+    transition: ease-in 0.5s;
+    opacity: 1;
+}
+
+.card-apresentacao1:hover, 
+.card-apresentacao2:hover,
+.card-apresentacao3:hover{
+    
+    background-color: rgba(110, 110, 110, 0.8);
 }
 
 #planos{
@@ -464,10 +545,3 @@ section {
     gap: 20px;
 }
 
-.vermelho:hover {
-    background: linear-gradient(90deg, #590000 0%, #8b0000 100%);
-}
-
-.amarelo:hover {
-    background: linear-gradient(90deg, #a67900 0%, #e6e600 100%);
-}

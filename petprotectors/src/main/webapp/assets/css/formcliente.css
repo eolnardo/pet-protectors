@@ -25,7 +25,7 @@
 }
 
 .form-image img{
-    width: 54rem;
+    width: 52rem;
 }
 
 .form{
@@ -36,7 +36,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #cccccc;
-    padding: 3rem;
+    padding: 3rem 1rem;
 }
 
 .form-header{
@@ -54,6 +54,12 @@
     position: relative;
     top: -10%;
     font-weight: bold;
+}
+
+.cadastrar-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .cadastrar-button button{
@@ -82,7 +88,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 1rem 3rem;
 }
 
 .input-box {
@@ -122,6 +128,11 @@
     color: #000;
 }
 
+.gender-inputs{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
 .gender-group{
     display: flex;
     justify-content: space-between;
@@ -145,15 +156,19 @@
 
 .cadastrar-button button {
     margin-left: 11rem;
-    width: fit-content;
     margin-top: 2.5rem;
     border: none;
-    background: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%);
-    padding: 0.6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     border-radius: 50px;
     cursor: pointer;
+    text-decoration: none;
+    
 }
 
-.cadastrar-button button:hover{
-    background: linear-gradient(90deg, #184d13 0%, #34ad29 100%);
+.cadastrar-button a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }

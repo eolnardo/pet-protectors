@@ -9,53 +9,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/icons/icon-pegada.ico" type="image/x-icon">
-    <title>Pet Protectors - Cadastre Pet</title>
+    <title>Pet Protectors - Editar Pet</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/formcliente.css">
 </head>
 
-<body>
+<body style="background-color: #b7bafd;">
 <div class="navbar">
+    <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
     <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
     <ul class="navbar-menu">
         <div class="hamburguer">
-            <div class="linha"></div>
-            <div class="linha"></div>
-            <div class="linha"></div>
         </div>
     </ul>
 </div>
 
-<section class="cadastro">
-    <form action="/create-pet" method="post">
-        <div class="cadastro-cliente">
-            <div id="titulo">
-                <p>Editar informações do Pet</p>
+<div class="container">
+    <div class="form-image">
+        <img src="assets/images/undraw_Dog_walking_re_l61p.png" alt="">
+    </div>
+    <div class="form">
+        <form action="create-usuario" method="post">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Editar Dados do Pet</h1>
+                </div>
             </div>
-            <div class="form-line">
-                <input type="hidden" id="petId" name="petId" value="${param.petId}">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" value="${param.nome}"><br><br>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" value="${param.nome}" required><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="idade">Idade:</label>
+                    <input type="text" id="idade" name="idade" value="${param.idade}" required><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="sexo">Sexo:</label>
+                    <input type="text" id="sexo" name="sexo" value="${param.sexo}" required><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="especie">Espécie:</label>
+                    <input type="text" id="especie" name="especie" value="${param.especie}" required><br><br>
+                </div>
+                <div class="input-box">
+                    <label for="raca">Raça:</label>
+                    <input type="raca" id="raca" name="raca" value="${param.raca}" required><br><br>
+                </div>
+                <div class="input-box">
+                    <input type="hidden" id="petId" name="petId" value="${param.petId}">
+                </div>
             </div>
-            <div class="form-line">
-                <label for="idade">Idade:</label>
-                <input type="text" id="idade" name="idade" value="${param.idade}"><br><br>
-                <label for="sexo">Sexo:</label>
-                <input type="text" id="sexo" name="sexo" value="${param.sexo}"><br><br>
-                <
+
+            <div class="cadastrar-button">
+                <button class="botao azul"><a href="index.jsp">Voltar</a></button>
+                <button type="submit" class="botao verde">Salvar</button>
             </div>
-            <div class="form-line" id="login">
-                <label for="especie">Espécie:</label>
-                <input type="text" id="especie" name="especie" value="${param.especie}"><br><br>
-                <label for="raca">Raça:</label>
-                <input type="raca" id="raca" name="raca" value="${param.raca}"><br><br>
-            </div>
-            <div>
-                <a href="Login-MeusPets.jsp" class="botao cinza">Voltar</a>
-                <button type="submit" class="botao verde">Editar</button>
-            </div>
-        </div>
-    </form>
-</section>
+        </form>
+    </div>
+</div>
 
 <script src="assets/js/menu.js"></script>
 </body>

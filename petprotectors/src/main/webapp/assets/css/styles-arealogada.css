@@ -11,6 +11,10 @@ body{
     margin: 0;
 }
 
+button{
+    border: none;
+}
+
 .sidebar a{
     text-decoration: none;
     color: #000;
@@ -81,7 +85,7 @@ body{
     background-color: #1E1D67;
     height: 200px;
     border-radius: 100px;
-    gap: -20px;
+    justify-content: flex-start;
 }
 
 .pet-card img{
@@ -101,6 +105,10 @@ body{
     flex-wrap: wrap;
 }
 
+.pet-info, .card-info h2 {
+    margin-left: -2rem;
+}
+
 .info-row {
     display: flex;
     flex-direction: row;
@@ -108,6 +116,7 @@ body{
 
 .pet-data{
     display: flex;
+    margin-right: 20px;
 }
 
 .pet-data p, input{

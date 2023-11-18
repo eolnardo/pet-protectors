@@ -16,8 +16,8 @@
     <body>
 
         <div class="navbar">
-            <img src="assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
-            <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
+            <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
+            <a href="index.jsp" class="navbar-brand" style="background-color: #1E1D67;">Pet Protectors</a>
         </div>
         <form>
             <div class="sidebar">
@@ -48,36 +48,45 @@
         <div class="conteudo">
             <div class="container">
                 <div class="form-image">
-                    <img src="assets/images/undraw_Dog_c7i6.png" alt="">
+                    <img src="assets/images/undraw_Experience_design_re_dmqq.png" alt="">
                 </div>
-                <div class="form-dados">
-                    <form action="update-usuario" method="get">
+                <div class="form">
+                    <form action="create-usuario" method="post">
+                        <div class="form-header">
+                            <div class="title">
+                                <h1>Meus Dados</h1>
+                            </div>
+                        </div>
                         <div class="input-group">
                             <div class="input-box">
-                                <input type="hidden" id="clienteId" name="clienteId" value="${cliente.clienteId}">
-
                                 <label for="nome">Nome</label>
-                                <input id="nome" type="text" name="nome" placeholder="" value="${cliente.nome}" readonly>
+                                <input type="hidden" id="clienteId" name="clienteId" value="${clienteId}">
+                                <input type="text" id="nome" name="nome" inputmode="text" placeholder="Digite seu nome"  value="${nome}"required>
+        
                             </div>
                             <div class="input-box">
                                 <label for="cpf">CPF</label>
-                                <input id="cpf" type="text" name="cpf" value="${cliente.cpf}" readonly>
+                                <input id="cpf" type="text" name="cpf" placeholder="___.___.___-__" inputmode="numeric" pattern="\[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" maxlength="14" value="${cpf}" required>
+                            </div>
+                            <div class="input-box">
+                                <label for="nascimento">Nascimento</label>
+                                <input id="nascimento" type="text" name="nascimento" placeholder="  /  /    " inputmode="numeric" pattern="\d{2}/\d{2}/\d{4}" maxlength="10" value="${nascimento}" required>
                             </div>
                             <div class="input-box">
                                 <label for="endereco">Endereço</label>
-                                <input id="endereco" type="text" name="endereco" value="${cliente.endereco}" readonly>
+                                <input id="endereco" type="text" name="endereco" placeholder="Digite o endereço" value="${endereco}" required>
                             </div>
                             <div class="input-box">
                                 <label for="telefone">Tel / Cel</label>
-                                <input id="telefone" type="text" name="telefone" value="${cliente.telefone}" readonly>
+                                <input id="telefone" type="text" name="telefone" placeholder="(__)_____-____" inputmode="numeric" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" maxlength="14" value="${telefone}" required>
                             </div>
                             <div class="input-box">
                                 <label for="email">E-mail</label>
-                                <input id="email" type="email" name="email" value="${cliente.email}" readonly>
+                                <input id="email" type="email" name="email" placeholder="Digite seu e-mail" value="${email}" required>
                             </div>
                             <div class="input-box">
                                 <label for="senha">Senha</label>
-                                <input id="senha" type="password" name="senha" value="${cliente.senha}" readonly>
+                                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" value="${senha}" required>
                             </div>
                         </div>
                         <div class="gender-inputs">
@@ -99,9 +108,9 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="cadastrar-button">
-                            <button type="submit" class="botao">Editar</button>
+                            <button class="botao cinza"><a href="index.jsp">Voltar</a></button>
+                            <button type="submit" class="botao verde">Cadastrar</button>
                         </div>
                     </form>
                 </div>

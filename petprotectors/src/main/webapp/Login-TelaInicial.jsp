@@ -17,7 +17,7 @@
 
     <div class="navbar">
         <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
-        <a href="#" class="navbar-brand">Pet Protectors</a>
+        <a href="index.jsp" class="navbar-brand" style="background-color: #1E1D67;">Pet Protectors</a>
     </div>
 
     <div class="sidebar">
@@ -49,6 +49,7 @@
         <div class="centralizado">
             <img id="img-inicio" src="assets/images/undraw_friends_r511.svg" alt="">
         </div>
+        <h1 style="margin-top: -4rem; color: #4DFF3E; text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;">Bem vindo à sua área!</h1>
     </div>
 
 </body>

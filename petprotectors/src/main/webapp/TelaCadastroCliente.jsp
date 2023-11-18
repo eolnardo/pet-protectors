@@ -8,22 +8,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/icons/icon-pegada-preta.ico" type="image/x-icon">
-    <title>Pet Protectors</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/formcliente.css">
+    <link rel="shortcut icon" href="assets/icons/icon-pegada.ico" type="image/x-icon">
+    <title>Pet Protectors - Cadastre-se</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/formcliente.css">
 </head>
 
 <body style="background-color: #b7bafd;">
     <div class="navbar">
-        <img src="assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
-        <a href="#" class="navbar-brand">Pet Protectors</a>
-        <!-- nessa tela não é necessário do menu hamburguer, um botao de voltar já está bom> -->
-        <ul class="navbar-menu">
-            <div class="hamburguer">
-                <button><a href="index.jsp" class="botao"></a>Voltar</button>
-            </div>
-        </ul>
+        <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
+        <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
+        <ul class="navbar-menu"></ul>
     </div>
 
     <div class="container">
@@ -147,9 +142,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cadastrar-button">
-                    <button type="submit" class="botao">Cadastrar</button>
+                    <button class="botao azul"><a href="index.jsp">Voltar</a></button>
+                    <button type="submit" class="botao verde">Cadastrar</button>
                 </div>
             </form>
         </div>

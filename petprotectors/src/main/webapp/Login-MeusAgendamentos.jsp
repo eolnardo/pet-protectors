@@ -16,7 +16,7 @@
 
     <div class="navbar">
         <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
-        <a href="#" class="navbar-brand">Pet Protectors</a>
+        <a href="index.jsp" class="navbar-brand" style="background-color: #1E1D67;">Pet Protectors</a>
     </div>
 
     <div class="sidebar">
@@ -49,7 +49,7 @@
                     <div class="pet-card">
                         <img src="assets/images/pata.png" alt="Pet Image">
                         <div class="card-info">
-                            <h2>Nome do Pet</h2>
+                            <h2>${pet.nome}</h2>
                             <div class="pet-info">
                                 <div class="info-row">
                                     <div class="pet-data">
@@ -73,8 +73,9 @@
                 </li>
                 <li>
                     <div>
-                        <a href="" class="botao cinza">Cancelar</a>
+                        <a href="" class="botao azul">Cancelar</a>
                         <a href="" class="botao verde">Novo</a>
+                        <!-- Preciso fazer a tela de criar agendamento ou alguém ja fez? -->
                     </div>
                 </li>
             </ul>

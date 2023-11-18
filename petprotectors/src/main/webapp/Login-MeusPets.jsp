@@ -24,18 +24,24 @@
             <div class="sidebar">
                 <div class="username">
                     <img src="assets/images/user.png" alt="User Image">
-                    <p>Usuário</p>
+                    <p>${cliente.nome}</p>
                 </div>
                 <ul>
-                    <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
+                    <form action="show-cliente" method="get">
+                        <li>
+                            <button type="submit">Meus Dados</button>
+                        </li>
+                    </form>
                     <form action="show-pets" method="get">
                         <li>
                             <button type="submit">Meus Pets</button>
                         </li>
                     </form>
                     <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
-                    <li><a href="">Meu Plano</a></li>
-                    <li><a href="index.jsp">Sair</a></li>
+                    <li><a href="Login-MeuPlano.jsp">Meu Plano</a></li>
+                    <c:if test="${sessionScope.loggedUser != null}">
+                        <li><a href="/logout">Sair</a></li>
+                    </c:if>
                 </ul>
             </div>
             <div class="conteudo" style="overflow: auto;">

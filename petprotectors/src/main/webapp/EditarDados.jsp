@@ -27,11 +27,20 @@
         <p>${cliente.nome}</p>
     </div>
     <ul>
-        <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
-        <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
-        <li><a href="Login-Agendamentos.html">Agendamentos</a></li>
-        <li><a href="">Meu Plano</a></li>
-        <li><a href="index.jsp">Sair</a></li>
+        <form action="show-cliente" method="get">
+            <li><button id="" href="Login-MeusDados.jsp">Meus Dados</button></li>
+        </form>
+        <form action="show-pets" method="get">
+            <li>
+                <input type="hidden" name="nome" value="${cliente.nome}">
+                <button type="submit">Meus Pets</button>
+            </li>
+        </form>
+        <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
+        <li><a href="Login-MeuPlano.jsp">Meu Plano</a></li>
+        <c:if test="${sessionScope.loggedUser != null}">
+            <li><a href="/logout">Sair</a></li>
+        </c:if>
     </ul>
 </div>
 <div class="conteudo">

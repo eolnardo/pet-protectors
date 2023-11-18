@@ -33,6 +33,12 @@ public class ListClienteServlet extends HttpServlet {
 
         req.setAttribute("cliente", cliente);
 
+        System.out.println(req.toString());
+
+        if(req.equals("login.jsp")){
+            req.getRequestDispatcher("selecionar-plano.jsp").forward(req, resp);
+        }
+
         req.getRequestDispatcher("Login-MeusDados.jsp").forward(req, resp);
 
     }

@@ -19,21 +19,27 @@
                 <img src="assets/images/user.png" alt="User Image">
                 <p>Usuário</p>
             </div>
-            <ul>
-                <li><a href="Login-MeusDados.jsp">Meus Dados</a></li>
-                <li><a href="Login-MeusPets.jsp">Meus Pets</a></li>
-                <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
-                <li><a href="Login-MeuPlano.jsp">Meu Plano</a></li>
-                <c:if test="${sessionScope.loggedUser != null}">
-                    <li><a href="/logout">Sair</a></li>
-                </c:if>
-            </ul>
+        <ul>
+            <form action="show-cliente" method="get">
+                <li>
+                    <button type="submit">Meus Dados</button>
+                </li>
+            </form>
+            <form action="show-pets" method="get">
+                <li>
+                    <button type="submit">Meus Pets</button>
+                </li>
+            </form>
+            <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
+            <li><a href="Login-MeuPlano.jsp">Meu Plano</a></li>
+            <c:if test="${sessionScope.loggedUser != null}">
+                <li><a href="/logout">Sair</a></li>
+            </c:if>
+        </ul>
         </div>
         <div class="conteudo">
             <div class="plano-atual">
                 <h2>Plano Atual</h2>
-                <p>${plano.nome}</p>
-                <p>${plano.nome}</p>
                 <p>${plano.nome}</p>
                 <p>${plano.preco}</p>
             </div>

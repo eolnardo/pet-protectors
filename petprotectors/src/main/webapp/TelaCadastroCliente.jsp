@@ -91,10 +91,6 @@
 
                     </div>
                     <div class="input-box">
-                        <label for="pets">Número de Pets</label>
-                        <input id="pets" type="text" name="pets" placeholder="Número de Pets:" inputmode="numeric" pattern="\[0-9]*" maxlength="20" value="${pets}" required>
-                    </div>
-                    <div class="input-box">
                         <label for="endereco">Endereço</label>
                         <input id="endereco" type="text" name="endereco" placeholder="Digite o endereço" value="${endereco}" required>
                     </div>

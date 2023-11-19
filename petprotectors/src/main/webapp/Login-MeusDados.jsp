@@ -51,7 +51,7 @@
                     <img src="assets/images/undraw_Experience_design_re_dmqq.png" alt="">
                 </div>
                 <div class="form">
-                    <form action="create-usuario" method="post">
+                    <form action="update-usuario" method="post">
                         <div class="form-header">
                             <div class="title">
                                 <h1>Meus Dados</h1>

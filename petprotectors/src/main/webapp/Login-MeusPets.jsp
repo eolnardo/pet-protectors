@@ -50,6 +50,7 @@
                         <li>
                             <table style="overflow: auto;">
                                 <tr>
+                                    <a href="TelaCadastroPet.jsp" class="botao verde">Adicionar Pet</a>
                                     <c:forEach var="pet" items="${pets}">
                                         <form action="/deletarPet" method="post">
                                             <div class="pet-card">
@@ -85,7 +86,7 @@
                                             <a href="TelaEditarPet.jsp?petId=${pet.petId}&nome=${pet.nome}&idade=${pet.idade}&sexo=${pet.sexo}&raca=${pet.raca}&especie=${pet.especie}"
                                                 class="botao azul">Editar</a>
                                             <button type="submit" class="botao vermelho">Excluir</button>
-                                            <a href="TelaCadastroPet.jsp" class="botao verde">Adicionar Pet</a>
+
                                         </form>
                                     </c:forEach>
                                 </tr>

@@ -26,7 +26,7 @@
             <img src="assets/images/undraw_Dog_walking_re_l61p.png" alt="">
         </div>
         <div class="form">
-            <form action="create-usuario" method="post">
+            <form action="create-pet" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre seu Pet</h1>
@@ -61,7 +61,7 @@
 
                 <div class="cadastrar-button">
                     <div>
-                        <button class="botao azul"><a href="index.jsp">Voltar</a></button>
+                        <button class="botao azul"><a href="Login-MeusDados.jsp">Voltar</a></button>
                     </div>
                     <div>
                         <button type="submit" class="botao verde">Cadastrar</button>

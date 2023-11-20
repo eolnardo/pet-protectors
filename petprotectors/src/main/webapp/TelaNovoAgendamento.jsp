@@ -43,7 +43,7 @@
 
                         <div class="agendamento-info">
                             <label for="data">Data:</label>
-                            <input type="date" placeholder="__/__/____" readonly>
+                            <input type="date" placeholder="__/__/____" input>
                         </div>
 
                         <div class="agendamento-info">
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="agendamento-info">
-                            <label for="local">Especialidade:</label>
+                            <label for="especialidade">Especialidade:</label>
                             <select id="unidades" class="inputLocal">
                                 <option value="exame">Exame</option>
                                 <option value="vacina">Vacina</option>
@@ -78,8 +78,8 @@
                                 <option value="internacao">Internação</option>
                             </select>
                         </div>
-
-                        <button type="button" class="botao azul" onclick="fecharReserva()">Voltar</button>
+                        <a class="botao azul" href="Login-MeusAgendamentos.jsp">Voltar</a>
+                       <!-- <button type="button" class="botao azul" onclick="fecharReserva()">Voltar</button>-->
                         <button type="submit" class="botao verde">Confirmar</button>
                     </form>
                 </div>

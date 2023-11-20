@@ -75,9 +75,8 @@
                     </li>
                     <li>
                         <div>
-                            <button class="botao azul">Cancelar</button>
-                            <button class="botao verde" onclick="novoAgendamento()">Novo</button>
-                            <!-- Preciso fazer a tela de criar agendamento ou alguém ja fez? -->
+                            <button class="botao azul">Desmarcar</button>
+                            <a class="botao verde" href="TelaNovoAgendamento.jsp">Novo Agendamento</a>
                         </div>
                     </li>
                 </ul>

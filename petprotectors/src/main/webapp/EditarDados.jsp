@@ -16,9 +16,9 @@
 
 <body>
 
-<div class="navbar">
-    <img src="assets/icons/icon-pegada.ico" alt="petprotectors-logo" style="height: 50px;">
-    <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
+    <div class="navbar">
+        <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
+        <a href="index.jsp" class="navbar-brand" style="background-color: #1E1D67;">Pet Protectors</a>
 </div>
 
 <div class="sidebar">

@@ -8,6 +8,17 @@
     list-style: none;
 }
 
+.agendamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agendamento h2{
+    color: #000;
+    font-size: 35px;
+}
+
 :root {
     font-size: 62.5%;
     --font-default: 'Montserrat';
@@ -94,7 +105,8 @@ a:hover {
     right: 0;
 }
 
-.sidebar button, a{
+.sidebar button,
+a {
     text-decoration: none;
     border: none;
     font-size: 2rem;
@@ -116,7 +128,7 @@ li input {
     border-radius: 20px;
 }
 
-#login{
+#login {
     justify-content: space-between;
 }
 
@@ -238,11 +250,11 @@ section {
     color: #000;
 }
 
-h3{
+h3 {
     color: #000;
 }
 
-.parent h1{
+.parent h1 {
     color: #000;
     text-align: justify;
     justify-content: center;
@@ -275,7 +287,9 @@ h3{
     background-size: cover;
 }
 
-.card-apresentacao1, .card-apresentacao2, .card-apresentacao3 {
+.card-apresentacao1,
+.card-apresentacao2,
+.card-apresentacao3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -287,7 +301,7 @@ h3{
     padding: 15px;
 }
 
-.card-apresentacao1 li{
+.card-apresentacao1 li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -295,39 +309,39 @@ h3{
     gap: 5rem;
 }
 
-.card-apresentacao2 li{
+.card-apresentacao2 li {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.card-apresentacao3 li{
+.card-apresentacao3 li {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.card-apresentacao1 li, 
+.card-apresentacao1 li,
 .card-apresentacao2 li,
-.card-apresentacao3 li{
+.card-apresentacao3 li {
     opacity: 0;
 }
 
-.card-apresentacao1 li:hover, 
+.card-apresentacao1 li:hover,
 .card-apresentacao2 li:hover,
-.card-apresentacao3 li:hover{
+.card-apresentacao3 li:hover {
     transition: ease-in 0.5s;
     opacity: 1;
 }
 
-.card-apresentacao1:hover, 
+.card-apresentacao1:hover,
 .card-apresentacao2:hover,
-.card-apresentacao3:hover{
-    
+.card-apresentacao3:hover {
+
     background-color: rgba(110, 110, 110, 0.8);
 }
 
-#planos{
+#planos {
     width: 100%;
     height: 100vh;
     margin-top: 0px;
@@ -545,3 +559,13 @@ h3{
     gap: 20px;
 }
 
+.agendamento-info {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+    row-gap: 30px;
+}
+
+.agendamento-info label {
+    font-size: 20px;
+}

@@ -54,14 +54,16 @@
                 <div class="card-apresentacao1">
                     <li>
                         <h1 style="font-size: 5rem;">Pet Protectors</h1>
-                        <span>O serviço de cuidados que traz para o seu animal de estimação uma vida longa e saudável.</span>
+                        <span>O serviço de cuidados que traz para o seu animal de estimação uma vida longa e
+                            saudável.</span>
                         <a href="#planos" class="botao verde">Veja mais!</a>
                     </li>
                 </div>
                 <div class="card-apresentacao2">
                     <li>
                         <h3 style="font-size: 2.7rem;">Atendimento Diversificado</h2>
-                        <span>O Pet Protectors cuida das mais variadas espécies, assim você pode tratar mais do que cães e gatos!</span>
+                            <span>O Pet Protectors cuida das mais variadas espécies, assim você pode tratar mais do que
+                                cães e gatos!</span>
                     </li>
                 </div>
                 <div class="card-apresentacao3">

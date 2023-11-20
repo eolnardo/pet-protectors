@@ -17,7 +17,7 @@
 <body style="background-color: #b7bafd;">
     <div class="navbar">
         <img src="assets/images/pegada.png" alt="petprotectors-logo" style="height: 50px;">
-        <a href="index.jsp" class="navbar-brand">Pet Protectors</a>
+        <a href="index.jsp" class="navbar-brand" style="background-color: #1E1D67;">Pet Protectors</a>
         <ul class="navbar-menu"></ul>
     </div>
 
@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="cadastrar-button">
-                    <button class="botao azul"><a href="index.jsp">Voltar</a></button>
+                    <button class="botao azul"><a class="azul" href="index.jsp">Voltar</a></button>
                     <button type="submit" class="botao verde">Cadastrar</button>
                 </div>
             </form>

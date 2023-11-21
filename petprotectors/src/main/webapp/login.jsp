@@ -81,6 +81,11 @@
     <body>
         <form id="login" action="login" method="post" class="cadastro">
             <div class="cadastro-cliente">
+
+
+
+                <span>${requestScope.message}</span>
+
                 <div class="form-line">
                     <label for="email">Usuário</label>
                     <input type="email" id="email" name="email" value="${param.email}">
@@ -89,6 +94,9 @@
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" value="${param.senha}">
                 </div>
+
+
+
                 <button type="submit" class="botao verde">Entrar</button>
             </div>
         </form>

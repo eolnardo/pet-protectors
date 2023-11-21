@@ -37,7 +37,11 @@
                     </li>
                 </form>
                 <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
-                <li><a href="Login-MeuPlano.jsp">Meu Plano</a></li>
+                <form action="show-subscription" method="get">
+                    <li>
+                        <button type="submit">Meu Plano</button>
+                    </li>
+                </form>
                 <c:if test="${sessionScope.loggedUser != null}">
                     <li><a href="/logout">Sair</a></li>
                 </c:if>

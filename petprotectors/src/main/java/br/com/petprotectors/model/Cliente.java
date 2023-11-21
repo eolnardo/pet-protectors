@@ -12,7 +12,7 @@ public class Cliente {
 
     private String pets;
 
-    private Date nascimento;
+    private String nascimento;
 
     private String email;
 
@@ -24,10 +24,14 @@ public class Cliente {
 
     private String clienteId;
 
+    public void setPlano(int plano) {
+        this.plano = plano;
+    }
+
     public Cliente() {
     }
 
-    public Cliente(String nome, String cpf, String genero, String pets,Date nascimento, String email, String senha, String endereco, String telefone, String id) {
+    public Cliente(String nome, String cpf, String genero, String pets,String nascimento, String email, String senha, String endereco, String telefone, String id) {
         this.nome = nome;
         this.cpf = cpf;
         this.genero = genero;
@@ -40,13 +44,15 @@ public class Cliente {
         this.clienteId = id;
     }
 
-    public Cliente(String nome, String cpf, String genero, String pets, String email, String senha, String endereco, String telefone, String id) {
+
+
+    public Cliente(String nome, String cpf, String genero, String nascimento, String email, String senha, String endereco, String telefone, String id) {
         this.nome = nome;
         this.cpf = cpf;
         this.genero = genero;
-        this.pets = pets;
         this.email = email;
         this.senha = senha;
+        this.nascimento = nascimento;
         this.endereco = endereco;
         this.telefone = telefone;
         this.clienteId = id;
@@ -59,6 +65,10 @@ public class Cliente {
     public Cliente(String email, String senha) {
         this.email = email;
         this.senha = senha;
+    }
+
+    public Cliente(int plano) {
+        this.plano = plano;
     }
 
     public String getNome() {
@@ -93,11 +103,11 @@ public class Cliente {
         this.pets = pets;
     }
 
-    public Date getNascimento() {
+    public String getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -158,6 +168,12 @@ public class Cliente {
                 ", endereco='" + endereco + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", clienteId='" + clienteId + '\'' +
+                ", plano='" + plano + '\'' +
                 '}';
+    }
+    private int plano;
+
+    public int getPlano() {
+        return plano;
     }
 }

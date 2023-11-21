@@ -16,15 +16,29 @@ import java.util.List;
 
 @WebServlet("/show-subscription")
 public class PlanoServlet extends HttpServlet {
+
+    private static int planoId = 0;
+
+    public static int getPlanoId() {
+        return planoId;
+    }
+
+    public static void setPlanoId(int planoId) {
+        PlanoServlet.planoId = planoId;
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PlanosDao planoDao = new PlanosDao();
 
-        int id = Integer.parseInt(req.getParameter("planoId"));
+        if (getPlanoId() == 0) setPlanoId(Integer.parseInt(req.getParameter("planoId")));
+        else setPlanoId(getPlanoId());
 
-        Planos plano = planoDao.verPlanoAtual(id);
+        Planos plano = planoDao.verPlanoAtual(getPlanoId());
 
         System.out.println(plano.getNome());
+
+        System.out.println(getPlanoId());
 
         req.setAttribute("plano", plano);
 

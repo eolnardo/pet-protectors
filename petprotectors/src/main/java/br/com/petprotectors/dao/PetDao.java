@@ -134,7 +134,7 @@ public class PetDao {
             preparedStatement.setString(6, pet.getPetId());
             preparedStatement.execute();
 
-            System.out.println("success in update pet");
+            System.out.println("success in upStringpet");
 
             connection.close();
 

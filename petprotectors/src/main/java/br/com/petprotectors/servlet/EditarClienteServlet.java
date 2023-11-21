@@ -30,6 +30,7 @@ public class EditarClienteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Cliente cliente = new ClienteDao().exibirCliente(ListClienteServlet.getId());
+
         ClienteDao clienteDao = new ClienteDao();
 
         System.out.println(cliente);
@@ -39,18 +40,19 @@ public class EditarClienteServlet extends HttpServlet {
         String clienteNome = req.getParameter("nome");
         String clienteCpf = req.getParameter("cpf");
         String clienteGenero = req.getParameter("genero");
-        String clientePets = req.getParameter("pets");
+        String clienteNascimento = req.getParameter("nascimento");
         String clienteEmail = req.getParameter("email");
         String clienteSenha = req.getParameter("senha");
         String clienteEndereco = req.getParameter("endereco");
         String clienteTelfone = req.getParameter("telefone");
         String clienteId = cliente.getClienteId();
 
-        Cliente novoCliente = new Cliente(clienteNome, clienteCpf, clienteGenero,/*clienteNascimento,*/ clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
+        Cliente novoCliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clienteNascimento, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
 
         if (!clienteId.isBlank()) {
             System.out.println(novoCliente);
             clienteDao.atualizarCliente(novoCliente);
+            System.out.println(novoCliente);
         }
 
         resp.sendRedirect("show-cliente");

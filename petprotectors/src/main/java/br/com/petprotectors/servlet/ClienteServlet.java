@@ -27,12 +27,14 @@ public class ClienteServlet extends HttpServlet {
         String clienteEmail = req.getParameter("email");
         String clienteSenha = req.getParameter("senha");
         String clienteEndereco = req.getParameter("endereco");
+        String clienteNascimento = req.getParameter("nascimento");
         String clienteTelfone = req.getParameter("telefone");
         String clienteId = req.getParameter("clienteId");
+        int plano = Integer.parseInt(req.getParameter("plano"));
 
         ClienteDao clienteDao = new ClienteDao();
-        Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero/*,clienteNascimento*/, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
-
+        Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clienteNascimento, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
+        PlanoServlet.setPlanoId(plano);
 
         if (clienteId == null || clienteId.isBlank()) {
             clienteDao.criarCliente(cliente);

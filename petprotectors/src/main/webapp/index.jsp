@@ -26,7 +26,16 @@
             </ul>
         </div>
 
-        <nav class="menu">
+        <nav class="menu" id="autenticadoLogin" style="display: none;">
+            <form id="" action="show-cliente" method="get">
+                <li>
+                    <button type="submit" class="botao verde" style="width: 25rem">Ver Perfil!</button>
+                </li>
+            </form>
+            </ul>
+        </nav>
+
+        <nav class="menu" id="naoautenticadoLogin" style="display: none;">
             <ul>
                 <form id="login" action="login" method="post">
                     <li>
@@ -61,14 +70,14 @@
                 </div>
                 <div class="card-apresentacao2">
                     <li>
-                        <h3 style="font-size: 2.7rem;">Atendimento Diversificado</h2>
+                        <h3 style="font-size: 2.7rem;">Atendimento Diversificado</h3>
                             <span>O Pet Protectors cuida das mais variadas espécies, assim você pode tratar mais do que
                                 cães e gatos!</span>
                     </li>
                 </div>
                 <div class="card-apresentacao3">
                     <li>
-                        <h3 style="font-size: 2.7rem;">Confiabilidade</h2>
+                        <h3 style="font-size: 2.7rem;">Confiabilidade</h3>
                             <span>Seu pet estará seguro nas mãos dos nossos profissionais capacitados!</span>
                     </li>
                 </div>
@@ -76,6 +85,7 @@
         </header>
         <section id="planos">
             <div id="secao-planos">
+
                 <ul>
                     <li>
                         <div class="card">
@@ -129,7 +139,30 @@
                                 <p>Processos cirúrgicos</p>
                             </div>
                             <h4>R$ 99,99</h4>
-                            <a href="login.jsp" class="botao verde">Assinar</a>
+
+
+
+                            <div id="autenticado" style="display: none;">
+                                <a href="login.jsp" class="botao verde">Assinar</a>
+                            </div>
+
+                            <div id="naoautenticado" style="display: none;">
+                                <a href="selecionar-plano.jsp" class="botao verde">Assinar</a>
+                            </div>
+
+                            <script>
+                                var isUserAuthenticated = ${sessionScope.loggedUser == null};
+
+
+                                if (isUserAuthenticated) {
+                                    document.getElementById("autenticado").style.display = "block";
+                                    document.getElementById("naoautenticadoLogin").style.display = "block";
+                                } else {
+                                    document.getElementById("naoautenticado").style.display = "block";
+                                    document.getElementById("autenticadoLogin").style.display = "block";
+                                }
+                            </script>
+
                         </div>
                     </li>
                 </ul>

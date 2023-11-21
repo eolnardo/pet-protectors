@@ -27,6 +27,9 @@
         </div>
         <div class="form">
             <form action="create-usuario" method="post">
+
+                <span>${requestScope.message}</span>
+
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -129,18 +132,38 @@
                     </div>
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input type="radio" id="feminino" name="gender">
+                            <input type="radio" id="feminino" name="genero">
                             <label for="feminino">Feminino</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="masculino" name="gender">
+                            <input type="radio" id="masculino" name="genero">
                             <label for="masculino">Masculino</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="outros" name="gender">
-                            <label for="outros">Outros</label>
+                            <input type="radio" id="outros" name="genero">
+                            <label for="outros"> Outro <input type="text" id="outro" name="genero"> </label>
+
                         </div>
                     </div>
+
+                    <input type="hidden" id="genero" name="genero" value="${genero}">
+
+                    <script>
+                        function getRadioValue() {
+                            var genderRadioButtons = document.getElementsByName("genero");
+
+                            for (var i = 0; i < genderRadioButtons.length; i++) {
+                                if (genderRadioButtons[i].checked) {
+                                    var selecionado = genderRadioButtons[i].value;
+                                    alert("O gênero selecionado é: " + selecionado);
+                                    return;
+                                }
+                            }
+
+                            alert("Selecione um gênero");
+                        }
+                    </script>
+
                 </div>
                 <div class="cadastrar-button">
                     <button class="botao azul"><a class="azul" href="index.jsp">Voltar</a></button>

@@ -1,9 +1,12 @@
 package br.com.petprotectors.model;
 
+import java.util.ArrayList;
+
 public class Planos {
     private String nome;
     private double preco;
     private int planoid;
+    private String descricao;
 
     public Planos() {
     }
@@ -12,6 +15,13 @@ public class Planos {
         this.nome = nome;
         this.preco = preco;
         this.planoid = planoid;
+    }
+
+    public Planos(int planoid, String nome, double preco, String descricao) {
+        this.nome = nome;
+        this.preco = preco;
+        this.planoid = planoid;
+        this.descricao = descricao;
     }
 
     public String getNome() {
@@ -36,6 +46,14 @@ public class Planos {
 
     public void setPlanoid(int planoid) {
         this.planoid = planoid;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override

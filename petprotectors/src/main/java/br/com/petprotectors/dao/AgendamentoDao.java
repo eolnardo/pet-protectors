@@ -97,7 +97,7 @@ public void atualizarAgendamento(Agendamento agendamento){
 
         preparedStatement.execute();
 
-        System.out.println("success in update cliente");
+        System.out.println("success in upStringcliente");
 
         connection.close();
 

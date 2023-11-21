@@ -28,7 +28,7 @@
                         <p>Atendimento à domicílio</p>
                     </div>
                     <h4>R$ 34,99</h4>
-                    <a href="login.jsp" class="botao verde">Assinar</a>
+                    <a href="AssinarPlanoBasico.jsp" class="botao verde">Assinar</a>
                 </div>
             </li>
             <li>
@@ -46,7 +46,7 @@
                         <p>Exames básicos e de imagem</p>
                     </div>
                     <h4>R$ 69,99</h4>
-                    <a href="login.jsp" class="botao verde">Assinar</a>
+                    <a href="AssinarPlanoMid.jsp" class="botao verde">Assinar</a>
                 </div>
             </li>
             <li>
@@ -56,6 +56,7 @@
                         <img class="big" src="assets/images/1-cat.png">
                         <img class="medium" src="assets/images/3-arara.png">
                     </div>
+
                     <div class="card-info">
                         <h3>Plano Premium</h3>
                         <p>Consultas das 06h as 20h</p>
@@ -65,9 +66,10 @@
                         <p>Internação</p>
                         <p>Processos cirúrgicos</p>
                     </div>
+
                     <h4>R$ 99,99</h4>
-                    <a href="login.jsp" class="botao verde">Assinar</a>
-                </div>
+
+                    <a href="AssinarPlanoPremium.jsp" class="botao verde">Assinar</a>
             </li>
         </ul>
     </div>

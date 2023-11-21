@@ -39,9 +39,9 @@ public class LoginServlet extends HttpServlet {
 
         } else {
 
-            req.setAttribute("message", "Invalid credentials!");
+            req.setAttribute("message", "E-mail ou senha inválidos!");
 
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
+            req.getRequestDispatcher("login.jsp").forward(req, resp);
 
         }
 

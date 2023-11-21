@@ -3,6 +3,7 @@ package br.com.petprotectors.dao;
 import br.com.petprotectors.model.Cliente;
 import br.com.petprotectors.model.Pet;
 import br.com.petprotectors.servlet.ListClienteServlet;
+import br.com.petprotectors.servlet.PlanoServlet;
 import br.com.petprotectors.servlet.config.ConnectionPoolConfig;
 
 import java.sql.*;
@@ -66,6 +67,8 @@ public class ClienteDao {
                 String clienteEndereco = resultSet.getString("endereco");
                 String clienteTelefone = resultSet.getString("telefone");
                 String clienteId = resultSet.getString("clienteId");
+                int plano = resultSet.getInt("plano");
+                PlanoServlet.setPlanoId(plano);
 
                 cliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelefone, clienteId);
             }
@@ -157,7 +160,7 @@ public class ClienteDao {
             preparedStatement.setString(6, cliente.getClienteId());
             preparedStatement.execute();
 
-            System.out.println("success in update cliente");
+            System.out.println("success in upStringcliente");
 
             connection.close();
 

@@ -33,7 +33,11 @@
                     </li>
                 </form>
                 <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
-                <li><a href="Login-MeuPlano.jsp">Meu Plano</a></li>
+                <form action="show-subscription" method="get">
+                    <li>
+                        <button type="submit">Meu Plano</button>
+                    </li>
+                </form>
                 <c:if test="${sessionScope.loggedUser != null}">
                     <li><a href="/logout">Sair</a></li>
                 </c:if>
@@ -47,15 +51,16 @@
                     <img class="medium" src="assets/images/3-arara.png">
                 </div>
                 <h2>Plano Atual</h2>
+                <input type="hidden" id="planoid" name="planoid" value="${plano.planoid}">
                 <p>${plano.nome}</p>
                 <p>${plano.preco}</p>
-                <p>Consultas das 06h as 20h</p>
-                <p>Cobertura de vacinas</p>
-                <p>Atendimento à domicílio</p>
+                <p>${plano.descricao}</p>
             </div>
             <div class="opcoes" style="margin-top: -5rem;">
-                <a href="#" class="botao vermelho">Cancelar</a>
-                <a href="#" class="botao azul">Mudar Plano</a>
+                <form action="cancel-plano" method="post">
+                    <button type="submit" class="botao vermelho">Cancelar</button>
+                </form>
+                <a href="selecionar-plano.jsp" class="botao azul">Mudar Plano</a>
             </div>
         </div>
     </body>

@@ -1,10 +1,12 @@
 package br.com.petprotectors.model;
 
+import br.com.petprotectors.dao.AgendamentoDao;
+
 import java.util.Date;
 
 public class Agendamento {
 private String agendamentoId;
-    public Agendamento(Date dataHora, Cliente cliente, Pet pet){
+    public Agendamento(String local,String especialidade, Date dataHora, Cliente cliente, Pet pet){
         this.dataHora = dataHora;
         this.cliente = cliente;
         this.pet = pet;
@@ -14,12 +16,14 @@ private String agendamentoId;
     private Date dataHora;
     private Cliente cliente;
     private Pet pet;
+    private Agendamento especialidade;
+    private Agendamento local;
 
     public Agendamento() {
 
     }
 
-    public Agendamento(java.sql.Date dataHora, String clienteId, String petId) {
+    public Agendamento(java.sql.Date dataHora, String clienteId, String petId, String especialidade, String local) {
     }
 
     public String getId(){
@@ -56,12 +60,13 @@ private String agendamentoId;
     @Override
     public String toString() {
         return "Agendamento{" +
-                "dataHora=" + dataHora +
+                "agendamentoId='" + agendamentoId + '\'' +
+                ", dataHora=" + dataHora +
                 ", cliente=" + cliente +
                 ", pet=" + pet +
+                ", especialidade=" + especialidade +
+                ", local=" + local +
                 '}';
     }
-
-
 }
 

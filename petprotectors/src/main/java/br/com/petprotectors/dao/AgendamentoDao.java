@@ -58,10 +58,13 @@ public class AgendamentoDao {
                 String nomecliente = resultSet.getString("nomeCliente");
                 String nomePet = resultSet.getString("nomePet");
                 Date dataHora = new Date(resultSet.getTimestamp("dataHora").getTime());
+                String especialidade = resultSet.getString("especialidade");
+                String local = resultSet.getString("local");
 
                 Cliente cliente = new Cliente();
                 Pet pet = new Pet();
-                agenda = new Agendamento(dataHora, cliente, pet );
+
+                agenda = new Agendamento(local, especialidade, dataHora, cliente, pet );
 
             }
             System.out.println("Sucesso na consulta ao cliente");

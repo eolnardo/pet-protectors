@@ -16,36 +16,37 @@ import java.text.SimpleDateFormat;
 public class AgendamentoServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String clienteId = req.getParameter("clienteId");
         String petId = req.getParameter("petId");
         String dataHoraString = req.getParameter("dataHora");
+        String local = req.getParameter("local");
+        String especialidade = req.getParameter("especialidade");
 
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        Date dataHora = null;
+
         try {
-            dataHora = (Date) dateFormat.parse(dataHoraString);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+            Date dataHora = new Date(dateFormat.parse(dataHoraString).getTime());
+
+            Agendamento agendamento = new Agendamento(dataHora, clienteId, petId, especialidade, local);
+
+            // Chamar o método correspondente na classe DAO para criar ou atualizar o agendamento
+            AgendamentoDao agendamentoDAO = new AgendamentoDao();
+
+            if (agendamento.getId() == null || agendamento.isEmpty()) {
+                agendamentoDAO.criarAgendamento(agendamento);
+            } else {
+                agendamentoDAO.atualizarAgendamento(agendamento);
+            }
+
+            // Encaminhar para a página de confirmação
+            req.getRequestDispatcher("cadastrado.html").forward(req, resp);
+
         } catch (ParseException e) {
-            e.printStackTrace();
+            // Lógica de tratamento para dataHoraString mal formatada
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Formato de data/hora inválido");
         }
-
-
-        Agendamento agendamento = new Agendamento(dataHora, clienteId, petId);
-
-        // Chame o método correspondente na classe DAO para criar ou atualizar o agendamento
-        AgendamentoDao agendamentoDAO = new AgendamentoDao();
-
-        if (agendamento.getId() == null || agendamento.isEmpty()) {
-
-            agendamentoDAO.criarAgendamento(agendamento);
-        } else {
-            agendamentoDAO.atualizarAgendamento(agendamento);
-        }
-
-        // Encaminhe para a página de confirmação
-        req.getRequestDispatcher("cadastrado.html").forward(req, resp);
     }
 }
 

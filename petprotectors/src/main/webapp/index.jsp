@@ -27,7 +27,7 @@
         </div>
 
         <nav class="menu">
-
+            <span>aaa</span>
             <ul class="" id="autenticadoLogin" style="display: none;">
                 <form id="" action="show-cliente" method="get">
                     <li>
@@ -71,21 +71,20 @@
                 <div class="card-apresentacao2">
                     <li>
                         <h3 style="font-size: 2.7rem;">Atendimento Diversificado</h3>
-                            <span>O Pet Protectors cuida das mais variadas espécies, assim você pode tratar mais do que
-                                cães e gatos!</span>
+                        <span>O Pet Protectors cuida das mais variadas espécies, assim você pode tratar mais do que
+                            cães e gatos!</span>
                     </li>
                 </div>
                 <div class="card-apresentacao3">
                     <li>
                         <h3 style="font-size: 2.7rem;">Confiabilidade</h3>
-                            <span>Seu pet estará seguro nas mãos dos nossos profissionais capacitados!</span>
+                        <span>Seu pet estará seguro nas mãos dos nossos profissionais capacitados!</span>
                     </li>
                 </div>
             </div>
         </header>
         <section id="planos">
             <div id="secao-planos">
-
                 <ul>
                     <li>
                         <div class="card">
@@ -101,8 +100,10 @@
                                 <p>Atendimento à domicílio</p>
                             </div>
                             <h4>R$ 34,99</h4>
-                            <a id="autenticadobasic" style="display: none;" href="login.jsp" class="botao verde">Assinar</a>
-                            <a id="naoautenticadobasic" style="display: none;" href="selecionar-plano.jsp" class="botao verde">Assinar</a>
+                            <a id="autenticadobasic" style="display: none;" href="login.jsp"
+                                class="botao verde">Assinar</a>
+                            <a id="naoautenticadobasic" style="display: none;" href="selecionar-plano.jsp"
+                                class="botao verde">Assinar</a>
                         </div>
                     </li>
                     <li>
@@ -120,8 +121,10 @@
                                 <p>Exames básicos e de imagem</p>
                             </div>
                             <h4>R$ 69,99</h4>
-                            <a id="autenticadomid" style="display: none;" href="login.jsp" class="botao verde">Assinar</a>
-                            <a id="naoautenticadomid" style="display: none;" href="selecionar-plano.jsp" class="botao verde">Assinar</a>
+                            <a id="autenticadomid" style="display: none;" href="login.jsp"
+                                class="botao verde">Assinar</a>
+                            <a id="naoautenticadomid" style="display: none;" href="selecionar-plano.jsp"
+                                class="botao verde">Assinar</a>
                         </div>
                     </li>
                     <li>
@@ -142,10 +145,11 @@
                             </div>
                             <h4>R$ 99,99</h4>
                             <a id="autenticado" style="display: none;" href="login.jsp" class="botao verde">Assinar</a>
-                            <a id="naoautenticado" style="display: none;"href="selecionar-plano.jsp" class="botao verde">Assinar</a>
+                            <a id="naoautenticado" style="display: none;" href="selecionar-plano.jsp"
+                                class="botao verde">Assinar</a>
 
                             <script>
-                                var isUserAuthenticated = ${sessionScope.loggedUser == null};
+                                var isUserAuthenticated = ${ sessionScope.loggedUser == null};
 
 
                                 if (isUserAuthenticated) {

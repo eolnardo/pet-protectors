@@ -26,17 +26,17 @@
             </ul>
         </div>
 
-        <nav class="menu" id="autenticadoLogin" style="display: none;">
-            <form id="" action="show-cliente" method="get">
-                <li>
-                    <button type="submit" class="botao verde" style="width: 25rem">Ver Perfil!</button>
-                </li>
-            </form>
-            </ul>
-        </nav>
+        <nav class="menu">
 
-        <nav class="menu" id="naoautenticadoLogin" style="display: none;">
-            <ul>
+            <ul class="" id="autenticadoLogin" style="display: none;">
+                <form id="" action="show-cliente" method="get">
+                    <li>
+                        <button type="submit" class="botao verde" style="width: 25rem">Ver Perfil!</button>
+                    </li>
+                </form>
+            </ul>
+
+            <ul id="naoautenticadoLogin" style="display: none;">
                 <form id="login" action="login" method="post">
                     <li>
                         <span class="login">Usuário</span>
@@ -101,7 +101,8 @@
                                 <p>Atendimento à domicílio</p>
                             </div>
                             <h4>R$ 34,99</h4>
-                            <a href="login.jsp" class="botao verde">Assinar</a>
+                            <a id="autenticadobasic" style="display: none;" href="login.jsp" class="botao verde">Assinar</a>
+                            <a id="naoautenticadobasic" style="display: none;" href="selecionar-plano.jsp" class="botao verde">Assinar</a>
                         </div>
                     </li>
                     <li>
@@ -119,7 +120,8 @@
                                 <p>Exames básicos e de imagem</p>
                             </div>
                             <h4>R$ 69,99</h4>
-                            <a href="login.jsp" class="botao verde">Assinar</a>
+                            <a id="autenticadomid" style="display: none;" href="login.jsp" class="botao verde">Assinar</a>
+                            <a id="naoautenticadomid" style="display: none;" href="selecionar-plano.jsp" class="botao verde">Assinar</a>
                         </div>
                     </li>
                     <li>
@@ -139,16 +141,8 @@
                                 <p>Processos cirúrgicos</p>
                             </div>
                             <h4>R$ 99,99</h4>
-
-
-
-                            <div id="autenticado" style="display: none;">
-                                <a href="login.jsp" class="botao verde">Assinar</a>
-                            </div>
-
-                            <div id="naoautenticado" style="display: none;">
-                                <a href="selecionar-plano.jsp" class="botao verde">Assinar</a>
-                            </div>
+                            <a id="autenticado" style="display: none;" href="login.jsp" class="botao verde">Assinar</a>
+                            <a id="naoautenticado" style="display: none;"href="selecionar-plano.jsp" class="botao verde">Assinar</a>
 
                             <script>
                                 var isUserAuthenticated = ${sessionScope.loggedUser == null};
@@ -156,9 +150,13 @@
 
                                 if (isUserAuthenticated) {
                                     document.getElementById("autenticado").style.display = "block";
+                                    document.getElementById("autenticadomid").style.display = "block";
+                                    document.getElementById("autenticadobasic").style.display = "block";
                                     document.getElementById("naoautenticadoLogin").style.display = "block";
                                 } else {
                                     document.getElementById("naoautenticado").style.display = "block";
+                                    document.getElementById("naoautenticadomid").style.display = "block";
+                                    document.getElementById("naoautenticadobasic").style.display = "block";
                                     document.getElementById("autenticadoLogin").style.display = "block";
                                 }
                             </script>

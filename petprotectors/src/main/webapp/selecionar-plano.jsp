@@ -47,7 +47,7 @@
                     </div>
                     <h4>R$ 69,99</h4>
                     <a href="AssinarPlanoMid.jsp" class="botao verde">Assinar</a>
-                </div>
+                    </div>
             </li>
             <li>
                 <div class="card">
@@ -68,8 +68,8 @@
                     </div>
 
                     <h4>R$ 99,99</h4>
-
                     <a href="AssinarPlanoPremium.jsp" class="botao verde">Assinar</a>
+                </div>
             </li>
         </ul>
     </div>

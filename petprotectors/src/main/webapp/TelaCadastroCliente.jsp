@@ -39,6 +39,7 @@
                     <div class="input-box">
                         <label for="nome">Nome</label>
                         <input type="hidden" id="clienteId" name="clienteId" value="${clienteId}">
+                        <input type="hidden" id="plano" name="plano" value="0">
                         <input type="text" id="nome" name="nome" inputmode="text" placeholder="Digite seu nome"  value="${nome}"required>
 
                     </div>

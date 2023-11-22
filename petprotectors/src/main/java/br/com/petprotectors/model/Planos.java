@@ -68,4 +68,14 @@ public class Planos {
     public int hashCode() {
         return nome.hashCode();
     }
+
+    @Override
+    public String toString() {
+        return "Planos{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", planoid=" + planoid +
+                ", descricao='" + descricao + '\'' +
+                '}';
+    }
 }

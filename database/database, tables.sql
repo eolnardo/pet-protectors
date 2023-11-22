@@ -31,8 +31,27 @@ CREATE TABLE pets (
 CREATE TABLE PLANOS (
     PLANOID INT AUTO_INCREMENT PRIMARY KEY,
     NOME VARCHAR(40),
-    PRECO DOUBLE
+    PRECO DOUBLE,
+    DESCRICAO VARCHAR (1000)
 );
 
 PLANOS
-INSERT INTO PLANOS (PLANOID, NOME, PRECO) VALUES (1, 'Plano Básico', 40.00)
+INSERT INTO PLANOS (PLANOID, NOME, PRECO, DESCRICAO) VALUES (0, '', 0.00, 'Você ainda não selecionou um plano
+Vá para página inicial!')
+
+INSERT INTO PLANOS (PLANOID, NOME, PRECO, DESCRICAO) VALUES (1, 'Plano Básico', 34.99, '	- Consultas das 06h as 20h
+- Cobertura de vacinas
+- Atendimento à domicílio')
+
+INSERT INTO PLANOS (PLANOID, NOME, PRECO, DESCRICAO) VALUES (2, 'Plano Médio', 69.99, '- Consultas das 06h as 20h
+- Cobertura de vacinas
+- Atendimento à domicílio
+- Exames básicos e de imagem')
+
+INSERT INTO PLANOS (PLANOID, NOME, PRECO, DESCRICAO) VALUES (3, 'Plano Médio', 99.99, '- Consultas das 06h as 20h
+- Cobertura de vacinas
+- Atendimento à domicílio
+- Exames básicos e de imagem
+- Exames complexos
+- Internação
+- Processos cirúrgicos')

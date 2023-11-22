@@ -55,7 +55,7 @@
         <div>
             <h1>Assinatura Confirmada!</h1>
             <p>Você selecionou o Plano Premium!<br><br>Você pode ver o seu plano na sessão Meu Plano:</p>
-            <form action="show-subscription" method="get">
+            <form action="show-subscription" method="post">
                 <input id="planoId" type="hidden" name="planoId" value="3">
                 <button type="submit" class="botao">Ver Meu Plano</button>
             </form>

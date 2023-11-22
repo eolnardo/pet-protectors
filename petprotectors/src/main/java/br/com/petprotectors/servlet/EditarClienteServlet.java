@@ -47,6 +47,8 @@ public class EditarClienteServlet extends HttpServlet {
         String clienteTelfone = req.getParameter("telefone");
         String clienteId = cliente.getClienteId();
 
+        System.out.println(clienteNascimento);
+
         Cliente novoCliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clienteNascimento, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);
 
         if (!clienteId.isBlank()) {

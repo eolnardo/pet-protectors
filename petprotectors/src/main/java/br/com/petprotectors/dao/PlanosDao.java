@@ -14,7 +14,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class PlanosDao {
+
+    List<Planos> planosSistema;
+
+    public List<Planos> getPlanosSistema() {
+        return planosSistema;
+    }
+
+    public void setPlanosSistema(List<Planos> planosSistema) {
+        this.planosSistema = planosSistema;
+    }
+
     public Planos verPlanoAtual(int id){
         String SQL = "SELECT * FROM PLANOS";
 
@@ -36,11 +48,11 @@ public class PlanosDao {
                 Double preco = resultSet.getDouble("preco");
                 String descricao = resultSet.getString("descricao");
 
-                descricao.replace("\n", " + '\n' + ");
-
                 Planos plano = new Planos(planoId, nome, preco, descricao);
 
                 planos.add(plano);
+
+                setPlanosSistema(planos);
 
                 if (planoId == id) {
                     planoAtual = plano;
@@ -59,15 +71,13 @@ public class PlanosDao {
                 preparedStatementCliente.setInt(1, planoId);
                 preparedStatementCliente.setString(2, ListClienteServlet.getId());
 
-                preparedStatementCliente.execute();
-
                 preparedStatementCliente.executeUpdate();
 
                 Cliente cliente = new Cliente(planoId);
 
                 System.out.println(cliente + ListClienteServlet.getId());
 
-            } catch (Exception e){
+            } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
 
@@ -77,4 +87,40 @@ public class PlanosDao {
             throw new RuntimeException(e);
         }
     }
+
+
+    public Planos alterarPlanoAtual(int id){
+        String SQL = "UPDATE CLIENTE SET PLANO = ? WHERE CLIENTEID = ?";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setInt(1, id);
+            preparedStatement.setString(2, ListClienteServlet.getId());
+
+            verPlanoAtual(id);
+
+            Planos novoPlano = null;
+
+            for (int i = 0; i<getPlanosSistema().size(); i++) {
+
+                if (getPlanosSistema().get(i).getPlanoid() == id) {
+                    novoPlano = getPlanosSistema().get(i);
+                    break;
+                }
+            }
+
+
+            System.out.println(novoPlano.toString());
+
+            return novoPlano;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
 }

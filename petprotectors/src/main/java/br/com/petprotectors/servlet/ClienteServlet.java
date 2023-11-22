@@ -30,7 +30,7 @@ public class ClienteServlet extends HttpServlet {
         String clienteNascimento = req.getParameter("nascimento");
         String clienteTelfone = req.getParameter("telefone");
         String clienteId = req.getParameter("clienteId");
-        int plano = Integer.parseInt(req.getParameter("plano"));
+        int plano = 0;
 
         ClienteDao clienteDao = new ClienteDao();
         Cliente cliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clienteNascimento, clienteEmail, clienteSenha, clienteEndereco, clienteTelfone, clienteId);

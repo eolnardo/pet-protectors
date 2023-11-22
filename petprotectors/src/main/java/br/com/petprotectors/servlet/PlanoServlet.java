@@ -32,23 +32,37 @@ public class PlanoServlet extends HttpServlet {
         PlanoServlet.planoId = planoId;
     }
 
+    public boolean isEmpty(){
+        return planoId == 0;
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        PlanosDao planodao = new PlanosDao();
 
-        PlanosDao planoDao = new PlanosDao();
-
-        if (getPlanoId() == 0) setPlanoId(Integer.parseInt(req.getParameter("planoId")));
-        else setPlanoId(getPlanoId());
-
-        Planos plano = planoDao.verPlanoAtual(getPlanoId());
-
-        System.out.println(plano.getNome());
-
-        System.out.println(getPlanoId());
+        Planos plano = planodao.verPlanoAtual(getPlanoId());
 
         req.setAttribute("plano", plano);
 
         req.getRequestDispatcher("Login-MeuPlano.jsp").forward(req, resp);
+
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
+            PlanosDao planodao = new PlanosDao();
+
+            Planos plano = planodao.alterarPlanoAtual(Integer.parseInt(req.getParameter("planoId")));
+
+            System.out.println(plano.toString());
+
+            req.setAttribute("plano", plano);
+
+            req.getRequestDispatcher("Login-MeuPlano.jsp").forward(req, resp);
+
+
     }
 }

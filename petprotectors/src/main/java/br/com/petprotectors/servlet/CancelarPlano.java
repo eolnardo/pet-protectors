@@ -1,6 +1,7 @@
 package br.com.petprotectors.servlet;
 
 import br.com.petprotectors.dao.PetDao;
+import br.com.petprotectors.dao.PlanosDao;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,9 +16,9 @@ import java.io.IOException;
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-            String petId = req.getParameter("planoId");
+            int planoId = PlanoServlet.getPlanoId();
 
-            new PetDao().deletePetByName(petId);
+            new PlanosDao().verPlanoAtual(planoId);
 
             resp.sendRedirect("/show-subscription");
 

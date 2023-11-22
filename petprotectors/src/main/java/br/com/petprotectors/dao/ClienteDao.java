@@ -36,9 +36,11 @@ public class ClienteDao {
             preparedStatement.execute();
 
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
+
 
             System.out.println("fail in database connection 1");
+            throw new RuntimeException(e);
 
         }
     }
@@ -103,6 +105,10 @@ public class ClienteDao {
 
             String id = resultSet.getString(1);
 
+            PlanoServlet.setPlanoId(resultSet.getInt("plano"));
+
+            ListClienteServlet.setId(resultSet.getString("clienteid"));
+
             System.out.println("success in select email");
 
             String senha = resultSet.getString("senha");
@@ -143,7 +149,7 @@ public class ClienteDao {
 
     public void atualizarCliente(Cliente cliente) {
 
-        String SQL = "UPDATE CLIENTE SET NOME = ?, ENDERECO = ?, TELEFONE = ?, EMAIL = ?, SENHA = ? WHERE CLIENTEID = ?";
+        String SQL = "UPDATE CLIENTE SET NOME = ?, ENDERECO = ?, TELEFONE = ?, EMAIL = ?, SENHA = ?, NASCIMENTO = ?  WHERE CLIENTEID = ?";
 
         try {
 
@@ -157,14 +163,15 @@ public class ClienteDao {
             preparedStatement.setString(3, cliente.getTelefone());
             preparedStatement.setString(4, cliente.getEmail());
             preparedStatement.setString(5, cliente.getSenha());
-            preparedStatement.setString(6, cliente.getClienteId());
+            preparedStatement.setString(6, cliente.getNascimento());
+            preparedStatement.setString(7, cliente.getClienteId());
             preparedStatement.execute();
 
             System.out.println("success in upStringcliente");
 
             connection.close();
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
 
             System.out.println("fail in database connection 6");
             System.out.println("Error: " + e.getMessage());

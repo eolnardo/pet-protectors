@@ -46,29 +46,4 @@ public class LoginServlet extends HttpServlet {
         }
 
     }
-
-    protected void doPostPlano(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        String email = req.getParameter("email");
-        String senha = req.getParameter("senha");
-
-        Cliente cliente = new Cliente(email, senha);
-
-        boolean isValidUser = new ClienteDao().verifyCredentials(cliente);
-
-        if (isValidUser) {
-
-            req.getSession().setAttribute("loggedUser", email);
-
-            resp.sendRedirect("show-cliente");
-
-        } else {
-
-            req.setAttribute("message", "Invalid credentials!");
-
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
-
-        }
-
-    }
 }

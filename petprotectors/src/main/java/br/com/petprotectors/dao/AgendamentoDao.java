@@ -20,7 +20,7 @@ public class AgendamentoDao {
 
             ResultSet rs = preparedStatement.getGeneratedKeys();
 
-            preparedStatement.setTimestamp(1, new java.sql.Timestamp(agendamento.getDataHora().getTime()));
+            preparedStatement.setTimestamp(1, new java.sql.Timestamp(agendamento.getData().getTime()));
             preparedStatement.setString(2, String.valueOf(agendamento.getCliente()));
             preparedStatement.setString(3, String.valueOf(agendamento.getPet()));
 
@@ -59,15 +59,16 @@ public class AgendamentoDao {
 
                 String nomecliente = resultSet.getString("nomeCliente");
                 String nomePet = resultSet.getString("nomePet");
-                Date dataHora = new Date(resultSet.getTimestamp("data").getTime());
+                Date dataHora = new Date(resultSet.getTimestamp("dataHora").getTime());
                 String especialidade = resultSet.getString("especialidade");
                 String local = resultSet.getString("local");
-
+                String agendamentoId = resultSet.getString("idagendamento");
                 Cliente cliente = new Cliente();
                 Pet pet = new Pet();
 
-                Agendamento agenda = new Agendamento(local, especialidade, dataHora, cliente, pet );
 
+                Agendamento agenda = new Agendamento(agendamentoId, dataHora, cliente, pet, especialidade, local);
+                agendamentos.add(agenda);  // Adiciona o agendamento à lista
             }
             System.out.println("Sucesso na consulta ao cliente");
 
@@ -94,7 +95,7 @@ public void atualizarAgendamento(Agendamento agendamento){
 
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-        preparedStatement.setString(1, agendamento.getDataHora().toString());
+        preparedStatement.setString(1, agendamento.getData().toString());
         preparedStatement.setString(2, String.valueOf(agendamento.getCliente()));
         preparedStatement.setString(3, String.valueOf(agendamento.getPet()));
 

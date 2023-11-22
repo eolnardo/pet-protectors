@@ -1,44 +1,40 @@
 package br.com.petprotectors.model;
 
-import br.com.petprotectors.dao.AgendamentoDao;
-
-import java.util.Date;
+import java.sql.Date;
 
 public class Agendamento {
-private String agendamentoId;
-    public Agendamento(String local,String especialidade, Date dataHora, Cliente cliente, Pet pet){
-        this.dataHora = dataHora;
-        this.cliente = cliente;
-        this.pet = pet;
-
-    }
-
-    private Date dataHora;
+    private String agendamentoId;
+    private Date data;
     private Cliente cliente;
     private Pet pet;
-    private Agendamento especialidade;
-    private Agendamento local;
+    private String especialidade;
+    private String local;
 
-    public Agendamento() {
-
+    public Agendamento(String agendamentoId, java.sql.Date data, Cliente cliente, Pet pet, String especialidade, String local) {
+        this.agendamentoId = agendamentoId;
+        this.cliente = cliente;
+        this.pet = pet;
+        this.especialidade = especialidade;
+        this.local = local;
     }
 
-    public Agendamento(java.sql.Date dataHora, String clienteId, String petId, String especialidade, String local) {
+    public Agendamento(Date dataHora, String clienteId, String petId, String especialidade, String local) {
     }
 
-    public String getId(){
-
+    public String getId() {
         return agendamentoId;
     }
-    public boolean isEmpty(){
+
+    public boolean isEmpty() {
         return this.agendamentoId.isEmpty();
     }
-    public Date getDataHora() {
-        return dataHora;
+
+    public Date getData() {
+        return data;
     }
 
-    public void setDataHora(Date dataHora) {
-        this.dataHora = dataHora;
+    public void setData(Date data) {
+        this.data = data;
     }
 
     public Cliente getCliente() {
@@ -57,16 +53,31 @@ private String agendamentoId;
         this.pet = pet;
     }
 
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
     @Override
     public String toString() {
         return "Agendamento{" +
                 "agendamentoId='" + agendamentoId + '\'' +
-                ", dataHora=" + dataHora +
+                ", data=" + data +
                 ", cliente=" + cliente +
                 ", pet=" + pet +
-                ", especialidade=" + especialidade +
-                ", local=" + local +
+                ", especialidade='" + especialidade + '\'' +
+                ", local='" + local + '\'' +
                 '}';
     }
 }
-

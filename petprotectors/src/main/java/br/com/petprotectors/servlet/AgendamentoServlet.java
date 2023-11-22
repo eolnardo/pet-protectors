@@ -18,12 +18,13 @@ public class AgendamentoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Servlet AgendamentoServlet acionado!");
+
         String clienteId = req.getParameter("clienteId");
         String petId = req.getParameter("petId");
         String dataString = req.getParameter("data");
         String local = req.getParameter("local");
         String especialidade = req.getParameter("especialidade");
-
+        String hora = req.getParameter("hora");
 
         System.out.println("hora:"+ dataString);
         try {
@@ -31,10 +32,9 @@ public class AgendamentoServlet extends HttpServlet {
 
             Date dataHora = new Date(dateFormat.parse(dataString).getTime());
 
-            Agendamento agendamento = new Agendamento(dataHora, clienteId, petId, especialidade, local);
-
 
             AgendamentoDao agendamentoDAO = new AgendamentoDao();
+            Agendamento agendamento = new Agendamento(dataHora, clienteId, petId, especialidade, local);
 
             if (agendamento.getId() == null || agendamento.isEmpty()) {
                 agendamentoDAO.criarAgendamento(agendamento);

@@ -106,6 +106,13 @@ a:hover {
     right: 0;
 }
 
+.btn-cadastrar {
+    background-color: #1E1D67;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+}
+
 .sidebar button,
 a {
     text-decoration: none;
@@ -140,7 +147,6 @@ header {
     width: 100%;
     background-image: url("../images/fundo-verde.jpg");
     background-size: cover;
-    /* background: linear-gradient(90deg, #349c2b 0%, #4DFF3E 100%); */
     color: var(--color-default);
     padding: 21rem;
     margin-top: 5rem;
@@ -246,7 +252,7 @@ section {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     border-radius: 20px;
-    margin-top: -16rem;
+    margin-top: -8rem;
     background: none;
     color: #000;
 }

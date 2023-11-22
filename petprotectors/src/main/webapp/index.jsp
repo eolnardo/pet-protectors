@@ -27,11 +27,10 @@
         </div>
 
         <nav class="menu">
-            <span>aaa</span>
             <ul class="" id="autenticadoLogin" style="display: none;">
                 <form id="" action="show-cliente" method="get">
                     <li>
-                        <button type="submit" class="botao verde" style="width: 25rem">Ver Perfil!</button>
+                        <button type="submit" class="botao verde">Ver Perfil</button>
                     </li>
                 </form>
             </ul>
@@ -54,7 +53,7 @@
                         <button type="submit" class="botao verde" style="width: 25rem">Entrar</button>
                     </li>
                 </form>
-                <a href="TelaCadastroCliente.jsp" style="font-size: 2.5rem; color: white;">Cadastre-se</a>
+                <a href="TelaCadastroCliente.jsp" class="btn-cadastrar">Cadastre-se</a>
             </ul>
         </nav>
 

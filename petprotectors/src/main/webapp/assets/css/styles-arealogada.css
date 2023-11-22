@@ -69,6 +69,7 @@ button{
     text-align: center;
     padding: 20px;
     position: fixed;
+    overflow: auto;
 }
 
 .centralizado img{

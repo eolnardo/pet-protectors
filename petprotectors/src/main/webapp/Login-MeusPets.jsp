@@ -60,8 +60,8 @@
                                             <div class="pet-card" style="margin-top: 2rem;">
                                                 <img src="assets/images/pata.png" alt="Pet Image">
                                                 <div class="card-info">
-                                                    <h2>${pet.nome}</h2>
                                                     <div class="pet-info">
+                                                    <h2>${pet.nome}</h2>
                                                         <input id="petId" type="hidden" name="petId" placeholder=""
                                                             value="${pet.petId}" readonly>
                                                         <div class="info-row">

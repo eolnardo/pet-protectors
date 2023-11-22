@@ -55,8 +55,8 @@
                         <div class="pet-card">
                             <img src="assets/images/pata.png" alt="Pet Image">
                             <div class="card-info">
-                                <h2> </h2>
-                                <div class="pet-info" style>
+                                <div class="pet-info" style="padding-top: 5rem">
+                                <h2>${pet.nome}</h2>
                                     <div class="info-row">
                                         <div class="pet-data">
                                             <p>Local:</p>
@@ -80,7 +80,7 @@
                     <li>
                         <div>
                             <button class="botao azul">Desmarcar</button>
-                            <a class="botao verde" href="TelaNovoAgendamento.jsp">Novo Agendamento</a>
+                            <a class="botao verde" href="TelaNovoAgendamento.jsp">Novo</a>
                         </div>
                     </li>
                 </ul>

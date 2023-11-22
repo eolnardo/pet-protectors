@@ -103,10 +103,9 @@ button{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 5rem;
 }
 
-.pet-info, .card-info h2 {
+.pet-info {
     margin-left: -2rem;
 }
 
@@ -131,6 +130,7 @@ button{
 
 .pet-data input{
     border-radius: 50px;
+    font-size: 20px
 }
 
 .plano-atual, .opcoes{

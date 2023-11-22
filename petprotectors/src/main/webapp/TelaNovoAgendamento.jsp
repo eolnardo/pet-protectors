@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="assets/icons/icon-pegada.ico" type="image/x-icon">
         <title>Pet Protectors - Cadastre-se</title>
         <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="stylesheet" href="assets/css/formcliente.css">
+        <link rel="stylesheet" href="assets/css/formclientelogado.css">
     </head>
 
     <body style="background-color: #b7bafd;">
@@ -21,14 +21,21 @@
             <ul class="navbar-menu"></ul>
         </div>
 
-        <div class="container">
-            <div class="form-image">
-                <img src="assets/images/undraw_Schedule_re_2vro.png" alt="">
+        <div class="container"style="margin-top: 10rem;">
+            <div class="form-image" style="width:50%">
+                <img src="assets/images/undraw_Schedule_re_2vro.png" style="width:100%" alt="">
             </div>
-            <div class="form">
+            <div class="form" style="width:50%; justify-content: space-between;">
                 <div class="agendamento">
                     <form action="/agendamento" method="post">
-                        <h2>Novo Agendamento</h2>
+                        <h2 style="color: #4DFF3E">Novo Agendamento</h2>
+
+                        <div class="agendamento-info" style="margin-top: 5rem">
+                            <label for="local">Pet:</label>
+                            <select id="pet" class="inputLocal">
+                                <option value="santoamaro">Selecionar Pet</option>
+                            </select>
+                        </div>
 
                         <div class="agendamento-info">
                             <label for="local">Local:</label>
@@ -78,9 +85,12 @@
                                 <option value="internacao">Internação</option>
                             </select>
                         </div>
-                        <a class="botao azul" href="Login-MeusAgendamentos.jsp">Voltar</a>
-                       <!-- <button type="button" class="botao azul" onclick="fecharReserva()">Voltar</button>-->
-                        <button type="submit" class="botao verde">Confirmar</button>
+
+                        <div style="margin-top: 5rem">
+                        <a class="botao cinza" href="Login-MeusAgendamentos.jsp">Voltar</a>
+                            <!-- <button type="button" class="botao cinza" onclick="fecharReserva()">Voltar</button>-->
+                            <button type="submit" class="botao verde">Confirmar</button>
+                        </div>
                     </form>
                 </div>
             </div>

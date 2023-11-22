@@ -574,10 +574,17 @@ h3 {
 .agendamento-info {
     display: flex;
     justify-content: space-around;
-    font-weight: 500;
+    font-weight: 700;
     row-gap: 30px;
+    color: #4DFF3E
 }
 
 .agendamento-info label {
+    width: 50%;
+    font-size: 25px;
+}
+
+.agendamento-info input, select {
+    width: 50%;
     font-size: 20px;
 }

@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 
             req.getSession().setAttribute("loggedUser", email);
 
-            resp.sendRedirect("show-cliente");
+            resp.sendRedirect("Login-TelaInicial.jsp");
 
         } else {
 

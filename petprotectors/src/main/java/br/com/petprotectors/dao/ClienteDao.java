@@ -73,7 +73,7 @@ public class ClienteDao {
                 int plano = resultSet.getInt("plano");
                 PlanoServlet.setPlanoId(plano);
 
-                cliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clienteNascimento, clienteEmail, clienteSenha, clienteEndereco, clienteTelefone, clienteId);
+                cliente = new Cliente(clienteNome,clientePets, clienteCpf, clienteGenero, clienteNascimento, clienteEmail, clienteSenha, clienteEndereco, clienteTelefone, clienteId);
             }
 
             System.out.println("Sucesso na consulta ao cliente");

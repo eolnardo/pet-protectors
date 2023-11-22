@@ -32,9 +32,9 @@
                     <li>
                         <button type="submit" class="botao verde">Ver Perfil</button>
                     </li>
-                    <li>
-                        <button type="submit" class="botao vermelho">Sair</button>
-                    </li>
+                    <c:if test="${sessionScope.loggedUser != null}">
+                        <li><a href="/logout" class="botao vermelho" >Sair</a></li>
+                    </c:if>
                 </form>
             </ul>
 

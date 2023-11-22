@@ -6,6 +6,8 @@ import br.com.petprotectors.model.Pet;
 import br.com.petprotectors.servlet.config.ConnectionPoolConfig;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AgendamentoDao {
     public void criarAgendamento(Agendamento agendamento){
@@ -34,14 +36,14 @@ public class AgendamentoDao {
         }
     }
 
-    public Agendamento exibirAgendamento(String id) {
+    public List<Agendamento> exibirAgendamentos(String id) {
         String SQL = "SELECT A.dataHora, C.nome as nomeCliente, P.nome as nomePet " +
                 "FROM AGENDAMENTO A " +
                 "JOIN CLIENTE C ON A.clienteId = C.clienteId " +
                 "JOIN PET P ON A.petId = P.petId " +
                 "WHERE C.clienteId = ?";
 
-        Agendamento agenda = null;
+        List<Agendamento> agendamentos = new ArrayList<>();
 
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
@@ -57,14 +59,14 @@ public class AgendamentoDao {
 
                 String nomecliente = resultSet.getString("nomeCliente");
                 String nomePet = resultSet.getString("nomePet");
-                Date dataHora = new Date(resultSet.getTimestamp("dataHora").getTime());
+                Date dataHora = new Date(resultSet.getTimestamp("data").getTime());
                 String especialidade = resultSet.getString("especialidade");
                 String local = resultSet.getString("local");
 
                 Cliente cliente = new Cliente();
                 Pet pet = new Pet();
 
-                agenda = new Agendamento(local, especialidade, dataHora, cliente, pet );
+                Agendamento agenda = new Agendamento(local, especialidade, dataHora, cliente, pet );
 
             }
             System.out.println("Sucesso na consulta ao cliente");
@@ -72,10 +74,8 @@ public class AgendamentoDao {
         } catch (SQLException e) {
             System.err.println("Erro na conexão com o banco de dados: " + e.getMessage());
         }
-        if (agenda == null) {
-            agenda = new Agendamento();
-        }
-        return agenda;
+
+        return agendamentos;
 
 
 

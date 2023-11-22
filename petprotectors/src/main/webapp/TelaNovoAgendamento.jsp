@@ -27,7 +27,7 @@
             </div>
             <div class="form">
                 <div class="agendamento">
-                    <form action="/agendamento" method="post">
+                    <form action="create-agendamento" method="post">
                         <h2>Novo Agendamento</h2>
 
                         <div class="agendamento-info">
@@ -43,7 +43,7 @@
 
                         <div class="agendamento-info">
                             <label for="data">Data:</label>
-                            <input type="date" placeholder="__/__/____" input>
+                            <input type="date" name ="data" placeholder="__/__/____" input>
                         </div>
 
                         <div class="agendamento-info">

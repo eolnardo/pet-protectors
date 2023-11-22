@@ -32,6 +32,9 @@
                     <li>
                         <button type="submit" class="botao verde">Ver Perfil</button>
                     </li>
+                    <li>
+                        <button type="submit" class="botao vermelho">Sair</button>
+                    </li>
                 </form>
             </ul>
 
@@ -62,7 +65,7 @@
                 <div class="card-apresentacao1">
                     <li>
                         <h1 style="font-size: 5rem;">Pet Protectors</h1>
-                        <span>O serviço de cuidados que traz para o seu animal de estimação uma vida longa e
+                        <span style="font-size: 2.7rem;">O serviço de cuidados que traz para o seu animal de estimação uma vida longa e
                             saudável.</span>
                         <a href="#planos" class="botao verde">Veja mais!</a>
                     </li>

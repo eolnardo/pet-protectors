@@ -56,6 +56,11 @@
                 </div>
                 <div class="form" style="background-color: #1E1D67;">
                     <form action="update-usuario" method="post">
+                    <div class="form-header">
+                                                <div class="title">
+                                                    <h1>Editar Dados</h1>
+                                                </div>
+                                            </div>
                         <div class="input-group">
                             <div class="input-box">
                                 <label for="nome">Nome</label>

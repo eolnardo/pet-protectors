@@ -57,7 +57,7 @@
                                     <a href="TelaCadastroPet.jsp" class="botao verde">Adicionar Pet</a>
                                     <c:forEach var="pet" items="${pets}">
                                         <form action="/deletarPet" method="post">
-                                            <div class="pet-card">
+                                            <div class="pet-card" style="margin-top: 2rem;">
                                                 <img src="assets/images/pata.png" alt="Pet Image">
                                                 <div class="card-info">
                                                     <h2>${pet.nome}</h2>

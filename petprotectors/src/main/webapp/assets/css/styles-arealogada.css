@@ -87,13 +87,12 @@ button{
     height: 200px;
     border-radius: 100px;
     justify-content: flex-start;
+    padding: 10px;
 }
 
 .pet-card img{
     height: 180px;
     width: 180px;
-    margin-top: 10px;
-    margin-left: 10px;
 }
 
 .card-info h2{
@@ -104,6 +103,7 @@ button{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-top: 5rem;
 }
 
 .pet-info, .card-info h2 {

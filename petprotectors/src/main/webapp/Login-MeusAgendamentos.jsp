@@ -55,8 +55,8 @@
                         <div class="pet-card">
                             <img src="assets/images/pata.png" alt="Pet Image">
                             <div class="card-info">
-                                <h2>${pet.nome}</h2>
-                                <div class="pet-info">
+                                <h2> </h2>
+                                <div class="pet-info" style>
                                     <div class="info-row">
                                         <div class="pet-data">
                                             <p>Local:</p>

@@ -11,7 +11,7 @@ import java.sql.*;
 public class ClienteDao {
 
     public void criarCliente(Cliente cliente) {
-        String SQL = "INSERT INTO CLIENTE (NOME, CPF, GENERO, PETS, EMAIL, SENHA, ENDERECO, TELEFONE) VALUES (?,?,?,?,?,?,?,?)";
+        String SQL = "INSERT INTO CLIENTE (NOME, CPF, GENERO, PETS, EMAIL, SENHA, ENDERECO, TELEFONE, NASCIMENTO) VALUES (?,?,?,?,?,?,?,?,?)";
 
         try {
 
@@ -31,7 +31,7 @@ public class ClienteDao {
             preparedStatement.setString(6, cliente.getSenha());
             preparedStatement.setString(7, cliente.getEndereco());
             preparedStatement.setString(8, cliente.getTelefone());
-
+            preparedStatement.setString(9, cliente.getNascimento());
 
             preparedStatement.execute();
 
@@ -69,10 +69,11 @@ public class ClienteDao {
                 String clienteEndereco = resultSet.getString("endereco");
                 String clienteTelefone = resultSet.getString("telefone");
                 String clienteId = resultSet.getString("clienteId");
+                String clienteNascimento = resultSet.getString("nascimento");
                 int plano = resultSet.getInt("plano");
                 PlanoServlet.setPlanoId(plano);
 
-                cliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clientePets, clienteEmail, clienteSenha, clienteEndereco, clienteTelefone, clienteId);
+                cliente = new Cliente(clienteNome, clienteCpf, clienteGenero, clienteNascimento, clienteEmail, clienteSenha, clienteEndereco, clienteTelefone, clienteId);
             }
 
             System.out.println("Sucesso na consulta ao cliente");

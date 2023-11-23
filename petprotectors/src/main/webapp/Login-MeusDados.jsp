@@ -36,7 +36,10 @@
                             <button type="submit">Meus Pets</button>
                         </li>
                     </form>
-                    <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
+
+                        <li>
+                            <a href="Login-MeusAgendamentos.jsp">Agendamentos</a>
+                        </li>
                     <form action="show-subscription" method="get">
                         <li>
                             <button type="submit">Meu Plano</button>

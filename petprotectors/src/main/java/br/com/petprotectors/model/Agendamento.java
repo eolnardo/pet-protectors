@@ -5,12 +5,13 @@ import java.sql.Date;
 public class Agendamento {
     private String agendamentoId;
     private Date data;
-    private Cliente cliente;
-    private Pet pet;
+    private String hora;
+    private String cliente;
+    private String pet;
     private String especialidade;
     private String local;
 
-    public Agendamento(String agendamentoId, java.sql.Date data, Cliente cliente, Pet pet, String especialidade, String local) {
+    public Agendamento(String agendamentoId, Date data, String cliente, String pet, String especialidade, String local) {
         this.agendamentoId = agendamentoId;
         this.cliente = cliente;
         this.pet = pet;
@@ -19,6 +20,12 @@ public class Agendamento {
     }
 
     public Agendamento(Date dataHora, String clienteId, String petId, String especialidade, String local) {
+        this.data = dataHora;
+        this.cliente = clienteId;
+        this.pet = petId;
+        this.especialidade = especialidade;
+        this.local = local;
+
     }
 
     public String getId() {
@@ -37,19 +44,19 @@ public class Agendamento {
         this.data = data;
     }
 
-    public Cliente getCliente() {
+    public String getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
+    public void setCliente(String cliente) {
         this.cliente = cliente;
     }
 
-    public Pet getPet() {
+    public String getPet() {
         return pet;
     }
 
-    public void setPet(Pet pet) {
+    public void setPet(String pet) {
         this.pet = pet;
     }
 
@@ -67,6 +74,14 @@ public class Agendamento {
 
     public void setLocal(String local) {
         this.local = local;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 
     @Override

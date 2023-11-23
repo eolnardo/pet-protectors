@@ -36,7 +36,11 @@
                         <button type="submit">Meus Pets</button>
                     </li>
                 </form>
-                <li><a href="Login-MeusAgendamentos.jsp">Agendamentos</a></li>
+                <form action="show-agendamentos" method="get">
+                    <li>
+                        <button type="submit">Agendamentos</button>
+                    </li>
+                </form>
                 <form action="show-subscription" method="get">
                     <li>
                         <button type="submit">Meu Plano</button>
@@ -52,35 +56,39 @@
             <div class="centralizado">
                 <ul>
                     <li>
-                        <div class="pet-card">
-                            <img src="assets/images/pata.png" alt="Pet Image">
-                            <div class="card-info">
-                                <div class="pet-info" style="padding-top: 5rem">
-                                <h2>${pet.nome}</h2>
-                                    <div class="info-row">
-                                        <div class="pet-data">
-                                            <p>Local:</p>
-                                            <input type="text" readonly>
-                                            <p>Data:</p>
-                                            <input type="date" placeholder="__/__/____" readonly>
+                        <c:forEach var="agendamento" items="${agendamentos}">
+                            <div class="pet-card">
+                                <img src="assets/images/pata.png" alt="Pet Image">
+                                <div class="card-info">
+                                    <div class="pet-info" style="padding-top: 5rem">
+                                    <h2>${pet.nome}</h2>
+                                        <div class="info-row">
+                                            <div class="pet-data">
+                                                <p>Local:</p>
+                                                <input type="text" id="local" name="local" value="${agendamento.local}" readonly>
+                                                <p>Data:</p>
+                                                <input type="date" id="data" value="${agendamento.data}" readonly>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <div class="pet-data">
-                                            <p style="font-size: 2.5rem;">Especialidade:</p>
-                                            <input type="text" readonly>
-                                            <p>Horário:</p>
-                                            <input type="time" readonly>
+                                        <div class="info-row">
+                                            <div class="pet-data">
+                                                <p style="font-size: 2.5rem;">Especialidade:</p>
+                                                <input type="text" id="especialidade" name="especialidade" value="${agendamento.especialidade}" readonly>
+                                                <p>Horário:</p>
+                                                <input type="time" id="hora" name="hora" value="${agendamento.hora}" readonly>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </c:forEach>
                     </li>
                     <li>
                         <div>
                             <button class="botao azul">Desmarcar</button>
-                            <a class="botao verde" href="TelaNovoAgendamento.jsp">Novo</a>
+                            <form action="create-agendamento" method="get">
+                                <button type="submit" class="botao verde">Novo</button>
+                            </form>
                         </div>
                     </li>
                 </ul>

@@ -12,6 +12,16 @@ import java.util.List;
 
 public class PetDao {
 
+    private static List<Pet> listaPets;
+
+    public static List<Pet> getListaPets() {
+        return listaPets;
+    }
+
+    public static void setListaPets(List<Pet> listaPets) {
+        PetDao.listaPets = listaPets;
+    }
+
     public void criarPet (Pet pet){
         String SQL = "INSERT INTO PETS (NOME, IDADE, SEXO, ESPECIE, RACA, TUTOR) VALUES (?,?,?,?,?,?)";
 
@@ -93,6 +103,7 @@ public class PetDao {
 
                 pets.add(pet);
 
+                setListaPets(pets);
 
             }
 

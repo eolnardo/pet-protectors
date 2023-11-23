@@ -27,35 +27,37 @@
             </div>
             <div class="form" style="width:50%; justify-content: space-between;">
                 <div class="agendamento">
-                    <form action="/agendamento" method="post">
+                    <form action="create-agendamento" method="post">
                         <h2 style="color: #4DFF3E">Novo Agendamento</h2>
 
                         <div class="agendamento-info" style="margin-top: 5rem">
-                            <label for="local">Pet:</label>
-                            <select id="pet" class="inputLocal">
-                                <option value="santoamaro">Selecionar Pet</option>
+                            <label for="pet">Pet:</label>
+                            <select id="petSelect" name="pet" class="inputLocal">
+                                <c:forEach var="pet" items="${pets}">
+                                <option value="${pet.petId}">${pet.nome}</option>
+                                </c:forEach>
                             </select>
                         </div>
 
                         <div class="agendamento-info">
                             <label for="local">Local:</label>
-                            <select id="unidades" class="inputLocal">
-                                <option value="santoamaro">Santo Amaro</option>
-                                <option value="brooklin">Brooklin</option>
-                                <option value="belavista">Higienópolis</option>
-                                <option value="belavista">Butantã</option>
-                                <option value="belavista">Mooca</option>
+                            <select id="local" name="local" class="inputLocal">
+                                <option value="Santo Amaro">Santo Amaro</option>
+                                <option value="Brooklin">Brooklin</option>
+                                <option value="Bela Vista">Higienópolis</option>
+                                <option value="Butantã">Butantã</option>
+                                <option value="Mooca">Mooca</option>
                             </select>
                         </div>
 
                         <div class="agendamento-info">
                             <label for="data">Data:</label>
-                            <input type="date" placeholder="__/__/____" input>
+                            <input type="date" id="data" name="data" placeholder="__/__/____" input>
                         </div>
 
                         <div class="agendamento-info">
                             <label for="horario">Horário:</label>
-                            <select id="horario" class="inputHorario">
+                            <select id="horario" name="horario" class="inputHorario">
                                 <option value="06">06:00</option>
                                 <option value="07">07:00</option>
                                 <option value="08">08:00</option>
@@ -78,7 +80,7 @@
 
                         <div class="agendamento-info">
                             <label for="especialidade">Especialidade:</label>
-                            <select id="unidades" class="inputLocal">
+                            <select id="especialidade" name="especialidade" class="inputLocal">
                                 <option value="exame">Exame</option>
                                 <option value="vacina">Vacina</option>
                                 <option value="consulta">Consulta de Rotina</option>

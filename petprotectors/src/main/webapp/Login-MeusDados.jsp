@@ -72,7 +72,7 @@
                             </div>
                             <div class="input-box">
                                 <label for="cpf">CPF</label>
-                                <input id="cpf" type="text" name="cpf" placeholder="___.___.___-__" inputmode="numeric" pattern="\[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" maxlength="14" value="${cliente.cpf}" readonly>
+                                <input id="cpf" type="text" name="cpf" placeholder="___.___.___-__" inputmode="numeric" pattern="\[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" maxlength="14" value="${cliente.genero}" readonly>
                             </div>
                             <div class="input-box">
                                 <label for="nascimento">Nascimento</label>
